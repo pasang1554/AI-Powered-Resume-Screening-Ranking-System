@@ -1,0 +1,9 @@
+streamlit
+scikit-learn
+PyPDF2
+nltk
+matplotlib
+groq
+pandas
+plotly
+altair
