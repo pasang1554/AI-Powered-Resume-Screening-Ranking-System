@@ -1,0 +1,40 @@
+MIKE CHEN
+Junior Python Developer
+Email: mike.c@email.com | GitHub: github.com/mikechen
+
+SUMMARY
+Recent computer science graduate eager to start career in software development.
+Self-taught Python with hands-on project experience.
+
+SKILLS
+- Python programming basics
+- Flask web framework
+- HTML and CSS basics
+- SQL and SQLite databases
+- Git version control
+- Basic Linux commands
+
+EXPERIENCE
+No formal work experience yet - fresh graduate
+
+EDUCATION
+B.Tech in Computer Science
+New Institute of Technology, 2024
+CGPA: 7.0/10
+
+PROJECTS
+- Personal Blog (Django, Python)
+- Weather App using API (Python)
+- To-Do List Application (Flask)
+- Simple Calculator (JavaScript)
+
+INTERESTS
+- Learning new technologies
+- Open source contributions
+- Competitive programming
+- Web development basics
+
+TRAINING
+- Completed Python course online
+- Learned HTML/CSS from tutorials
+- Built few small projects
