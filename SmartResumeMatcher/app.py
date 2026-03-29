@@ -8,19 +8,10 @@ import pandas as pd
 import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
-from utils import (
-    extract_text_from_pdf,
-    calculate_similarity,
-    find_missing_skills,
-    extract_semantic_skills,
-    calculate_skill_depth,
-    detect_bias_indicators,
-    detect_experience_years,
-    calculate_ats_score,
-    calculate_detailed_match,
-)
 import time
 from datetime import datetime
+import requests
+import io
 
 SAMPLE_JD = """SOFTWARE ENGINEER
 Full Stack Development Position
@@ -141,6 +132,10 @@ st.set_page_config(
 
 if "demo_loaded" not in st.session_state:
     st.session_state.demo_loaded = False
+if "token" not in st.session_state:
+    st.session_state.token = None
+
+API_URL = "http://localhost:8000/api/v1"
 
 st.markdown(
     """
@@ -177,6 +172,47 @@ with st.sidebar:
         """<div style="text-align: center; padding: 20px 0;"><div style="font-size: 48px;">🤖</div><h1 style="font-size: 22px; font-weight: 800; background: linear-gradient(135deg, #667eea, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin: 10px 0 0 0;">ResumeAI Pro</h1></div>""",
         unsafe_allow_html=True,
     )
+    
+    st.markdown("---")
+    st.markdown("### 🔐 Authentication")
+    
+    if st.session_state.token is None:
+        auth_tab1, auth_tab2 = st.tabs(["Login", "Register"])
+        
+        with auth_tab1:
+            login_email = st.text_input("Email", key="login_email")
+            login_password = st.text_input("Password", type="password", key="login_pw")
+            if st.button("Login", use_container_width=True):
+                try:
+                    res = requests.post(f"{API_URL}/token", data={"username": login_email, "password": login_password})
+                    if res.status_code == 200:
+                        st.session_state.token = res.json()["access_token"]
+                        st.success("✅ Logged in!")
+                        st.rerun()
+                    else:
+                        st.error("⚠️ Invalid credentials")
+                except requests.exceptions.ConnectionError:
+                    st.error("⚠️ Cannot connect to backend (is it running?)")
+        
+        with auth_tab2:
+            reg_email = st.text_input("Email", key="reg_email")
+            reg_username = st.text_input("Username", key="reg_user")
+            reg_password = st.text_input("Password", type="password", key="reg_pw")
+            if st.button("Register", use_container_width=True):
+                try:
+                    res = requests.post(f"{API_URL}/register", json={"email": reg_email, "username": reg_username, "password": reg_password})
+                    if res.status_code == 200:
+                        st.success("✅ Registered! Please login.")
+                    else:
+                        st.error(f"⚠️ {res.json().get('detail', 'Registration failed')}")
+                except requests.exceptions.ConnectionError:
+                    st.error("⚠️ Cannot connect to backend (is it running?)")
+    else:
+        st.success("✅ Authenticated")
+        if st.button("Logout", use_container_width=True):
+            st.session_state.token = None
+            st.rerun()
+
     st.markdown("---")
     if st.button("🚀 Load Sample Data", use_container_width=True):
         st.session_state.demo_loaded = True
@@ -189,6 +225,7 @@ with st.sidebar:
         st.rerun()
     if st.session_state.get("demo_loaded"):
         st.success("✅ Demo loaded!")
+        
     st.markdown("---")
     st.markdown("**📄 Upload Resumes**")
     uploaded_files = st.file_uploader(
@@ -196,12 +233,15 @@ with st.sidebar:
     )
     st.markdown("---")
     threshold = st.slider("Match Threshold", 0, 100, 50)
-    enable_bias = st.checkbox("Bias Detection", value=True)
 
 st.markdown(
     """<div class="main-header"><h1>Smart Resume Matcher</h1><p style="color: rgba(255,255,255,0.6); margin-top: 10px;">AI-Powered Resume Screening & Candidate Ranking</p></div>""",
     unsafe_allow_html=True,
 )
+
+if not st.session_state.token:
+    st.warning("⚠️ Please Login or Register in the sidebar to access the AI API.")
+    st.stop()
 
 st.markdown("**📋 Job Description**")
 jd_text = SAMPLE_JD if st.session_state.get("demo_loaded") else ""
@@ -218,65 +258,53 @@ with col2:
 if analyze_clicked:
     if st.session_state.get("demo_loaded") and st.session_state.get("demo_jd"):
         job_desc = st.session_state.demo_jd
-        resumes = st.session_state.demo_resumes
+        files_to_upload = st.session_state.demo_resumes
     elif job_description and uploaded_files:
         job_desc = job_description
-        resumes = [(f.name, None) for f in uploaded_files]
+        files_to_upload = uploaded_files
     else:
         st.error("⚠️ Load demo or enter JD + upload resumes")
         st.stop()
 
-    with st.spinner("Analyzing..."):
+    with st.spinner("Analyzing securely via API..."):
         progress = st.progress(0)
-        results = []
-        files = resumes if resumes else uploaded_files
-
-        for idx, item in enumerate(files):
-            if st.session_state.get("demo_loaded"):
-                name, text = item
+        
+        # Prepare multipart payload
+        files_payload = []
+        if st.session_state.get("demo_loaded"):
+            # Dummy files from text
+            for name, text in files_to_upload:
+                b = io.BytesIO(text.encode('utf-8'))
+                files_payload.append(("files", (name, b, "text/plain")))
+        else:
+            # Actual st.uploaded_file objects
+            for f in files_to_upload:
+                f.seek(0)
+                files_payload.append(("files", (f.name, f.read(), f.type)))
+                
+        data = {"job_description": job_desc, "threshold": threshold}
+        headers = {"Authorization": f"Bearer {st.session_state.token}"}
+        
+        # Increase progress visually
+        progress.progress(0.3)
+        
+        try:
+            response = requests.post(f"{API_URL}/analyze/pdf", data=data, files=files_payload, headers=headers)
+            progress.progress(0.9)
+            
+            if response.status_code == 200:
+                results = response.json().get("candidates", [])
             else:
-                f = item
-                name = f.name
-                text = (
-                    f.read().decode("utf-8")
-                    if name.endswith(".txt")
-                    else extract_text_from_pdf(f)
-                )
-
-            if text and len(text) > 50:
-                detailed = calculate_detailed_match(job_desc, text)
-                ats = calculate_ats_score(text)
-                exp = detect_experience_years(text)
-                req_skills = extract_semantic_skills(job_desc)
-                cand_skills = detailed["all_resume_skills"]
-                missing = list(set(req_skills) - set([s.lower() for s in cand_skills]))
-
-                results.append(
-                    {
-                        "Rank": 0,
-                        "Candidate": name.replace(".pdf", "").replace(".txt", ""),
-                        "Score": round(detailed["total"], 1),
-                        "Skill_Score": detailed["skill_score"],
-                        "Exp_Score": detailed["experience_score"],
-                        "KW_Score": detailed["keyword_score"],
-                        "ATS": ats,
-                        "Experience": exp,
-                        "Skills_Count": len(cand_skills),
-                        "Missing": missing[:5],
-                        "Missing_Count": len(missing),
-                        "Status": "Shortlisted"
-                        if detailed["total"] >= threshold
-                        else "Not Selected",
-                        "Top_Skills": cand_skills[:6],
-                    }
-                )
-            progress.progress((idx + 1) / len(files))
+                st.error(f"API Error {response.status_code}: {response.text}")
+                st.stop()
+                
+            progress.progress(1.0)
             time.sleep(0.3)
+        except Exception as e:
+            st.error(f"Connection Error: {e}")
+            st.stop()
 
     if results:
-        results = sorted(results, key=lambda x: x["Score"], reverse=True)
-        for i, r in enumerate(results):
-            r["Rank"] = i + 1
         df = pd.DataFrame(results)
 
         st.markdown("### 📊 Results")
@@ -356,12 +384,13 @@ if analyze_clicked:
                         st.metric("Skills Found", row["Skills_Count"])
                     with col3:
                         st.metric("Missing Skills", row["Missing_Count"])
-                    if row["Top_Skills"]:
+                    
+                    if row.get("Top_Skills"):
                         st.markdown(
                             "**🎯 Skills:** "
                             + ", ".join([f"`{s}`" for s in row["Top_Skills"]])
                         )
-                    if row["Missing"]:
+                    if row.get("Missing"):
                         st.markdown(
                             "**⚠️ Missing:** "
                             + ", ".join([f"`{s}`" for s in row["Missing"]])
@@ -388,9 +417,9 @@ if analyze_clicked:
                     use_container_width=True,
                 )
     else:
-        st.error("No valid resumes found")
+        st.error("No candidates matched or backend returned empty results.")
 
 st.markdown(
-    """<br><br><div style="text-align: center; color: rgba(255,255,255,0.3); font-size: 12px;">ResumeAI Pro v5.0 | Mini Project</div>""",
+    """<br><br><div style="text-align: center; color: rgba(255,255,255,0.3); font-size: 12px;">ResumeAI Pro v5.1 | Fullstack API Powered</div>""",
     unsafe_allow_html=True,
 )

@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, status, UploadFile, File, Form
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
 from datetime import timedelta
@@ -196,14 +196,21 @@ async def analyze_resumes(
 
 @router.post("/analyze/pdf")
 async def analyze_pdf_resumes(
-    job_description: str,
-    threshold: float = 65.0,
-    files: List = None,
+    job_description: str = Form(...),
+    threshold: float = Form(65.0),
+    files: List[UploadFile] = File(...),
     db: Session = Depends(get_db),
     current_user: User = Depends(get_current_user),
 ):
-    from PyPDF2 import PdfReader
-    from io import BytesIO
+    from utils import (
+        extract_text_from_pdf,
+        calculate_detailed_match,
+        calculate_ats_score,
+        detect_experience_years,
+        extract_semantic_skills
+    )
+    from datetime import datetime
+    import io
 
     results = []
     jd = JobDescription(
@@ -216,10 +223,70 @@ async def analyze_pdf_resumes(
     db.commit()
     db.refresh(jd)
 
+    for f in files:
+        file_bytes = await f.read()
+        file_obj = io.BytesIO(file_bytes)
+        text = extract_text_from_pdf(file_obj)
+        
+        if text and len(text) > 50:
+            detailed = calculate_detailed_match(job_description, text)
+            ats = calculate_ats_score(text)
+            exp = detect_experience_years(text)
+            req_skills = extract_semantic_skills(job_description)
+            cand_skills = detailed.get("all_resume_skills", [])
+            missing = list(set(req_skills) - set([s.lower() for s in cand_skills]))
+            
+            cand = Candidate(
+                job_description_id=jd.id,
+                name=f.filename.replace(".pdf", "").replace(".txt", ""),
+                resume_text=text,
+                resume_filename=f.filename,
+                skills=cand_skills
+            )
+            db.add(cand)
+            db.commit()
+            db.refresh(cand)
+            
+            status = "Shortlisted" if detailed["total"] >= threshold else "Not Selected"
+            
+            analysis = Analysis(
+                user_id=current_user.id,
+                job_description_id=jd.id,
+                candidate_id=cand.id,
+                match_score=detailed["total"],
+                semantic_similarity=detailed.get("keyword_score", 0.0),
+                skill_depth=detailed.get("skill_score", 0.0),
+                missing_skills=missing[:5],
+                matched_skills=cand_skills[:6],
+                status=status
+            )
+            db.add(analysis)
+            db.commit()
+
+            results.append({
+                "Rank": 0,
+                "Candidate": cand.name,
+                "Score": round(detailed["total"], 1),
+                "Skill_Score": detailed.get("skill_score", 0),
+                "Exp_Score": detailed.get("experience_score", 0),
+                "KW_Score": detailed.get("keyword_score", 0),
+                "ATS": ats,
+                "Experience": exp,
+                "Skills_Count": len(cand_skills),
+                "Missing": missing[:5],
+                "Missing_Count": len(missing),
+                "Status": status,
+                "Top_Skills": cand_skills[:6],
+            })
+
+    results = sorted(results, key=lambda x: x["Score"], reverse=True)
+    for i, r in enumerate(results):
+        r["Rank"] = i + 1
+
     return {
         "job_description_id": jd.id,
         "candidates": results,
-        "summary": generate_summary(results),
+        "summary": {"total_candidates": len(results)}
     }
 
 
