@@ -39,9 +39,11 @@ The problem with traditional hiring is volume and lack of strategic foresight—
 4.  **Process**: The system extracts text using `PyPDF2` and cleans it using `nltk`. Everything is processed asynchronously via our **API layer**.
 5.  **Results**:
     *   **🏆 Rankings Tab**: You see a ranked table of candidates with interactive KPI metrics.
+    *   **🛡️ Blind Hiring Mode**: *(Key Talking Point)* "If I toggle this, candidate PII is instantly hashed into unique UIDs. This ensures our first-stage screening is 100% merit-based and free from unconscious bias."
     *   **📈 Analytics Tab**: Global talent benchmarks and skill distribution heatmaps.
     *   **⚖️ Comparison Tab**: Side-by-side analysis. *Key Highlight:* We've added a direct candidate selector here so recruiters can pivot their analysis without leaving the tab.
-    *   **🔬 Details Tab**: Deep-dive into specific skill gaps and experience breakdowns.
+    *   **🔬 Details Tab**: Deep-dive into specific skill gaps and multi-modal signals like **Video Snapshots**.
+    *   **🚀 Public Gateway**: "We've also exposed a REST endpoint for external careers pages, allowing candidates to push resumes directly into this neural pipeline."
     *   **📅 Interviews Tab (The AI Verifier)**: Includes the **Autonomous Simulator**—a logic-defying 'Prep Mode' where the AI adopts the candidate's persona for roleplay.
     *   **💾 Export Tab**: Formal PDF Briefs and ZIP archiving of verified profiles.
 
@@ -59,8 +61,11 @@ The problem with traditional hiring is volume and lack of strategic foresight—
 **Q: What is TF-IDF?**
 **A**: "Term Frequency-Inverse Document Frequency. It highlights words that are unique and important to the Job Description, rather than just counting common words like 'the' or 'and'."
 
-**Q: How accurate is the score?**
-**A**: "The TF-IDF score is a good baseline for keyword matching. The AI evaluation adds a layer of semantic understanding, making the final assessment much more reliable than keyword matching alone."
+**Q: How do you handle bias?**
+**A**: "We implement **Blind Hiring Mode**, which uses Regex and NLTK to redact names, emails, and photos from the initial screening view. This forces the decision-maker to focus strictly on skills and the 'Strategic Match' score."
+
+**Q: Can this scale to a public website?**
+**A**: "Yes. Version 8.1 includes a **Public Gateway** API. Any 3rd party website can send an HTTP POST request with a resume file to our FastAPI endpoint, which automatically parses it and adds it to the recruitment pool."
 
 ---
 *Good luck with your presentation!*

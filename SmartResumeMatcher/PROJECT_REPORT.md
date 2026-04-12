@@ -218,6 +218,16 @@ To ensure seamless transitions between sessions, the system implements a robust 
 - **Analysis Reconstruction**: Associated `Analysis` records are joined with `Candidate` records to reconstruct the dashboard state, including radar chart data and AI verdicts, without re-running expensive LLM calls.
 - **Session Continuity**: Using Streamlit's `session_state`, the application maintains the "Active Project" context even when navigating between complex modules like "Singularity Foresight" or "Interviews".
 
+### 6.6 Multi-modal Intelligence Layer
+The system has been enhanced to process non-text signals. 
+- **Signal Ingestion**: Recruiters can upload Video Snapshots and Audio Intros alongside resumes.
+- **Vision/Audio Integration**: The backend extracts metadata from these files, which the AI then analyzes to provide a more holistic evaluation of the candidate's communication style and behavioral fit.
+
+### 6.7 Public Gateway Architecture
+Version 8.1.13 introduces a global-scale recruitment gateway.
+- **API Scalability**: A dedicated `/public/apply` endpoint allows external platforms to submit profiles.
+- **Automated Ingestion**: Incoming applications are automatically validated, parsed, and injected into the Talent Intelligence Pool without manual entry, enabling 24/7 autonomous recruitment.
+
 ---
 
 ## CHAPTER 7: RESULT AND DISCUSSION
