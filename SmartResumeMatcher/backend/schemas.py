@@ -20,6 +20,7 @@ class UserLogin(BaseModel):
 class UserResponse(UserBase):
     id: int
     is_active: bool
+    role: str
     created_at: datetime
 
     class Config:
@@ -56,6 +57,7 @@ class JobDescriptionUpdate(BaseModel):
 class JobDescriptionResponse(JobDescriptionBase):
     id: int
     user_id: int
+    is_archived: bool
     created_at: datetime
     updated_at: datetime
 
@@ -129,3 +131,31 @@ class HealthResponse(BaseModel):
     status: str
     version: str
     timestamp: datetime
+
+class InterviewBase(BaseModel):
+    interview_date: datetime
+    medium: str
+    notes: Optional[str] = None
+    interviewer_score: Optional[float] = None
+    feedback_summary: Optional[str] = None
+    status: Optional[str] = "Scheduled"
+
+class InterviewCreate(InterviewBase):
+    candidate_id: int
+
+class InterviewResponse(InterviewBase):
+    id: int
+    candidate_id: int
+    created_at: datetime
+
+    class Config:
+        from_attributes = True
+
+class AnalysisStatusUpdate(BaseModel):
+    status: str
+
+class InterviewFeedbackUpdate(BaseModel):
+    notes: Optional[str] = None
+    interviewer_score: Optional[float] = None
+    feedback_summary: Optional[str] = None
+    status: Optional[str] = None

@@ -1,0 +1,1251 @@
+INFO:     Started server process [2877]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:50399 - "POST /api/v1/token HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50401 - "GET /api/v1/me HTTP/1.1" 200 OK
+[nltk_data] Downloading package wordnet to
+[nltk_data]     /Users/stanzinpasang/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+Rate limit hit. Retrying in 2.60 seconds (Attempt 1/3)...
+INFO:     127.0.0.1:50561 - "POST /api/v1/analyze/pdf HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50572 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50575 - "GET /api/v1/interviews HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50579 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50581 - "POST /api/v1/analyze/simulate HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:50583 - "GET /api/v1/interviews HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50727 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50730 - "POST /api/v1/analyze/simulate HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:50732 - "GET /api/v1/interviews HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50752 - "POST /api/v1/token HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50754 - "GET /api/v1/me HTTP/1.1" 200 OK
+Rate limit hit. Retrying in 3.22 seconds (Attempt 1/3)...
+Rate limit hit. Retrying in 3.14 seconds (Attempt 1/3)...
+Rate limit hit. Retrying in 5.36 seconds (Attempt 2/3)...
+Rate limit hit. Retrying in 5.20 seconds (Attempt 2/3)...
+Rate limit hit. Retrying in 2.37 seconds (Attempt 1/3)...
+Rate limit hit. Retrying in 8.93 seconds (Attempt 3/3)...
+INFO:     127.0.0.1:50763 - "POST /api/v1/analyze/pdf HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50801 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50803 - "GET /api/v1/interviews HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50829 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50832 - "GET /api/v1/interviews HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50840 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50842 - "GET /api/v1/interviews HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50846 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50848 - "POST /api/v1/analyze/simulate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50852 - "GET /api/v1/interviews HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50892 - "POST /api/v1/token HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50894 - "GET /api/v1/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50906 - "POST /api/v1/analyze/pdf HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50910 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50912 - "GET /api/v1/interviews HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50997 - "POST /api/v1/token HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51000 - "GET /api/v1/me HTTP/1.1" 200 OK
+Rate limit hit. Retrying in 3.19 seconds (Attempt 1/3)...
+Rate limit hit. Retrying in 2.26 seconds (Attempt 1/3)...
+Rate limit hit. Retrying in 4.81 seconds (Attempt 2/3)...
+Rate limit hit. Retrying in 2.75 seconds (Attempt 1/3)...
+Rate limit hit. Retrying in 9.25 seconds (Attempt 3/3)...
+Rate limit hit. Retrying in 4.39 seconds (Attempt 2/3)...
+Rate limit hit. Retrying in 3.01 seconds (Attempt 1/3)...
+INFO:     127.0.0.1:51008 - "POST /api/v1/analyze/pdf HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51051 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51053 - "GET /api/v1/interviews HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51060 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51062 - "GET /api/v1/interviews HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51066 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51068 - "GET /api/v1/interviews HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51070 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51072 - "POST /api/v1/analyze/scorecard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51076 - "GET /api/v1/interviews HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51081 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51083 - "GET /api/v1/interviews HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51086 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51088 - "GET /api/v1/interviews HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51486 - "POST /api/v1/token HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51488 - "GET /api/v1/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51496 - "POST /api/v1/analyze/pdf HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51500 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51502 - "GET /api/v1/interviews HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51504 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51506 - "GET /api/v1/interviews HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51509 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51513 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51515 - "POST /api/v1/interviews HTTP/1.1" 200 OK
+
+    ======================= NEW EMAIL DISPATCHED =======================
+    To: sara.j@email.com
+    From: recruitment@smartresumematcher.com
+    Subject: Interview Invitation - SOFTWARE ENGINEER
+    
+    Dear SARA JOHNSON,
+    
+    Congratulations! Your profile successfully passed our AI screening system 
+    with an impressive Match Score of 74.8%.
+    
+    We would love to invite you for a technical interview. Please let us know
+    your availability for next week.
+    
+    Best regards,
+    The Hiring Team (test@example.com)
+    ====================================================================
+    
+INFO:     127.0.0.1:51517 - "POST /api/v1/notify HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/protocols/http/httptools_impl.py", line 415, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/applications.py", line 1138, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 121, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 107, in app
+    response = await f(request)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 426, in app
+    raw_response = await run_endpoint_function(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 314, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/Users/stanzinpasang/Desktop/mini project/AI-Powered-Resume-Screening-Ranking-System/SmartResumeMatcher/backend/routes/api.py", line 702, in notify_candidate
+    import asyncio
+NameError: name 'datetime' is not defined
+INFO:     127.0.0.1:51519 - "GET /api/v1/interviews HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51521 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51523 - "GET /api/v1/interviews HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51525 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51527 - "GET /api/v1/interviews HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51530 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51532 - "GET /api/v1/candidates/13/resume HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51534 - "GET /api/v1/interviews HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51536 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51538 - "GET /api/v1/interviews HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51540 - "PATCH /api/v1/analyses/105/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51542 - "PATCH /api/v1/analyses/105/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51544 - "PATCH /api/v1/analyses/104/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51548 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51550 - "GET /api/v1/interviews HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51552 - "POST /api/v1/job-descriptions/None/archive HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:51554 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51556 - "GET /api/v1/interviews HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51558 - "POST /api/v1/job-descriptions/None/archive HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:51560 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51562 - "GET /api/v1/interviews HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51564 - "GET /api/v1/analyze/project/None/brief HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:51604 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51606 - "GET /api/v1/audit-logs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51608 - "GET /api/v1/candidates/vault HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/protocols/http/httptools_impl.py", line 415, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/applications.py", line 1138, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 121, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 107, in app
+    response = await f(request)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 448, in app
+    content = await serialize_response(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 303, in serialize_response
+    return jsonable_encoder(response_content)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 302, in jsonable_encoder
+    jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 336, in jsonable_encoder
+    return jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 288, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 317, in jsonable_encoder
+    return ENCODERS_BY_TYPE[type(obj)](obj)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 68, in <lambda>
+    bytes: lambda o: o.decode(),
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd3 in position 10: invalid continuation byte
+INFO:     127.0.0.1:51610 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51612 - "GET /api/v1/job-descriptions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51614 - "GET /api/v1/job-descriptions/14/analyses HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51616 - "GET /api/v1/audit-logs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51618 - "GET /api/v1/candidates/vault HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/protocols/http/httptools_impl.py", line 415, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/applications.py", line 1138, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 121, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 107, in app
+    response = await f(request)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 448, in app
+    content = await serialize_response(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 303, in serialize_response
+    return jsonable_encoder(response_content)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 302, in jsonable_encoder
+    jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 336, in jsonable_encoder
+    return jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 288, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 317, in jsonable_encoder
+    return ENCODERS_BY_TYPE[type(obj)](obj)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 68, in <lambda>
+    bytes: lambda o: o.decode(),
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd3 in position 10: invalid continuation byte
+INFO:     127.0.0.1:51620 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51622 - "POST /api/v1/analytics/project/17/synthesis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51624 - "GET /api/v1/audit-logs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51626 - "GET /api/v1/candidates/vault HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/protocols/http/httptools_impl.py", line 415, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/applications.py", line 1138, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 121, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 107, in app
+    response = await f(request)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 448, in app
+    content = await serialize_response(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 303, in serialize_response
+    return jsonable_encoder(response_content)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 302, in jsonable_encoder
+    jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 336, in jsonable_encoder
+    return jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 288, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 317, in jsonable_encoder
+    return ENCODERS_BY_TYPE[type(obj)](obj)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 68, in <lambda>
+    bytes: lambda o: o.decode(),
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd3 in position 10: invalid continuation byte
+INFO:     127.0.0.1:51628 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51630 - "GET /api/v1/audit-logs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51632 - "GET /api/v1/candidates/vault HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/protocols/http/httptools_impl.py", line 415, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/applications.py", line 1138, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 121, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 107, in app
+    response = await f(request)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 448, in app
+    content = await serialize_response(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 303, in serialize_response
+    return jsonable_encoder(response_content)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 302, in jsonable_encoder
+    jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 336, in jsonable_encoder
+    return jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 288, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 317, in jsonable_encoder
+    return ENCODERS_BY_TYPE[type(obj)](obj)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 68, in <lambda>
+    bytes: lambda o: o.decode(),
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd3 in position 10: invalid continuation byte
+INFO:     127.0.0.1:51641 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51643 - "GET /api/v1/job-descriptions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51645 - "GET /api/v1/job-descriptions/17/analyses HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51647 - "GET /api/v1/audit-logs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51649 - "GET /api/v1/candidates/vault HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/protocols/http/httptools_impl.py", line 415, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/applications.py", line 1138, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 121, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 107, in app
+    response = await f(request)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 448, in app
+    content = await serialize_response(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 303, in serialize_response
+    return jsonable_encoder(response_content)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 302, in jsonable_encoder
+    jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 336, in jsonable_encoder
+    return jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 288, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 317, in jsonable_encoder
+    return ENCODERS_BY_TYPE[type(obj)](obj)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 68, in <lambda>
+    bytes: lambda o: o.decode(),
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd3 in position 10: invalid continuation byte
+INFO:     127.0.0.1:51653 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51655 - "GET /api/v1/audit-logs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51657 - "GET /api/v1/candidates/vault HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/protocols/http/httptools_impl.py", line 415, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/applications.py", line 1138, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 121, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 107, in app
+    response = await f(request)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 448, in app
+    content = await serialize_response(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 303, in serialize_response
+    return jsonable_encoder(response_content)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 302, in jsonable_encoder
+    jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 336, in jsonable_encoder
+    return jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 288, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 317, in jsonable_encoder
+    return ENCODERS_BY_TYPE[type(obj)](obj)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 68, in <lambda>
+    bytes: lambda o: o.decode(),
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd3 in position 10: invalid continuation byte
+INFO:     127.0.0.1:51659 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51661 - "GET /api/v1/audit-logs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51663 - "GET /api/v1/candidates/vault HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/protocols/http/httptools_impl.py", line 415, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/applications.py", line 1138, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 121, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 107, in app
+    response = await f(request)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 448, in app
+    content = await serialize_response(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 303, in serialize_response
+    return jsonable_encoder(response_content)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 302, in jsonable_encoder
+    jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 336, in jsonable_encoder
+    return jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 288, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 317, in jsonable_encoder
+    return ENCODERS_BY_TYPE[type(obj)](obj)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 68, in <lambda>
+    bytes: lambda o: o.decode(),
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd3 in position 10: invalid continuation byte
+INFO:     127.0.0.1:51665 - "GET /api/v1/job-descriptions/11/export HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51669 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51671 - "GET /api/v1/job-descriptions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51673 - "GET /api/v1/job-descriptions/17/analyses HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51675 - "GET /api/v1/audit-logs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51677 - "GET /api/v1/candidates/vault HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/protocols/http/httptools_impl.py", line 415, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/applications.py", line 1138, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 121, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 107, in app
+    response = await f(request)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 448, in app
+    content = await serialize_response(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 303, in serialize_response
+    return jsonable_encoder(response_content)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 302, in jsonable_encoder
+    jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 336, in jsonable_encoder
+    return jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 288, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 317, in jsonable_encoder
+    return ENCODERS_BY_TYPE[type(obj)](obj)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 68, in <lambda>
+    bytes: lambda o: o.decode(),
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd3 in position 10: invalid continuation byte
+INFO:     127.0.0.1:51681 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51683 - "GET /api/v1/audit-logs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51685 - "GET /api/v1/candidates/vault HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/protocols/http/httptools_impl.py", line 415, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/applications.py", line 1138, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 121, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 107, in app
+    response = await f(request)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 448, in app
+    content = await serialize_response(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 303, in serialize_response
+    return jsonable_encoder(response_content)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 302, in jsonable_encoder
+    jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 336, in jsonable_encoder
+    return jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 288, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 317, in jsonable_encoder
+    return ENCODERS_BY_TYPE[type(obj)](obj)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 68, in <lambda>
+    bytes: lambda o: o.decode(),
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd3 in position 10: invalid continuation byte
+INFO:     127.0.0.1:51687 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51689 - "GET /api/v1/audit-logs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51691 - "GET /api/v1/candidates/vault HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/protocols/http/httptools_impl.py", line 415, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/applications.py", line 1138, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 121, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 107, in app
+    response = await f(request)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 448, in app
+    content = await serialize_response(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 303, in serialize_response
+    return jsonable_encoder(response_content)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 302, in jsonable_encoder
+    jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 336, in jsonable_encoder
+    return jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 288, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 317, in jsonable_encoder
+    return ENCODERS_BY_TYPE[type(obj)](obj)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 68, in <lambda>
+    bytes: lambda o: o.decode(),
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd3 in position 10: invalid continuation byte
+INFO:     127.0.0.1:51693 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51695 - "GET /api/v1/audit-logs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51697 - "GET /api/v1/candidates/vault HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/protocols/http/httptools_impl.py", line 415, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/applications.py", line 1138, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 121, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 107, in app
+    response = await f(request)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 448, in app
+    content = await serialize_response(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 303, in serialize_response
+    return jsonable_encoder(response_content)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 302, in jsonable_encoder
+    jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 336, in jsonable_encoder
+    return jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 288, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 317, in jsonable_encoder
+    return ENCODERS_BY_TYPE[type(obj)](obj)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 68, in <lambda>
+    bytes: lambda o: o.decode(),
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd3 in position 10: invalid continuation byte
+INFO:     127.0.0.1:51699 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51701 - "GET /api/v1/audit-logs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51703 - "GET /api/v1/candidates/vault HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/protocols/http/httptools_impl.py", line 415, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/applications.py", line 1138, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 121, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 107, in app
+    response = await f(request)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 448, in app
+    content = await serialize_response(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 303, in serialize_response
+    return jsonable_encoder(response_content)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 302, in jsonable_encoder
+    jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 336, in jsonable_encoder
+    return jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 288, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 317, in jsonable_encoder
+    return ENCODERS_BY_TYPE[type(obj)](obj)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 68, in <lambda>
+    bytes: lambda o: o.decode(),
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd3 in position 10: invalid continuation byte
+INFO:     127.0.0.1:51705 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51707 - "GET /api/v1/interviews HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51739 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51741 - "POST /api/v1/analyze/scorecard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51744 - "GET /api/v1/interviews HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51746 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51748 - "GET /api/v1/audit-logs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51750 - "GET /api/v1/candidates/vault HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/protocols/http/httptools_impl.py", line 415, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/applications.py", line 1138, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 121, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 107, in app
+    response = await f(request)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 448, in app
+    content = await serialize_response(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 303, in serialize_response
+    return jsonable_encoder(response_content)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 302, in jsonable_encoder
+    jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 336, in jsonable_encoder
+    return jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 288, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 317, in jsonable_encoder
+    return ENCODERS_BY_TYPE[type(obj)](obj)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 68, in <lambda>
+    bytes: lambda o: o.decode(),
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd3 in position 10: invalid continuation byte
+INFO:     127.0.0.1:51752 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51754 - "GET /api/v1/job-descriptions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51756 - "GET /api/v1/job-descriptions/16/analyses HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51758 - "GET /api/v1/audit-logs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51760 - "GET /api/v1/candidates/vault HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/protocols/http/httptools_impl.py", line 415, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/applications.py", line 1138, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 121, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 107, in app
+    response = await f(request)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 448, in app
+    content = await serialize_response(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 303, in serialize_response
+    return jsonable_encoder(response_content)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 302, in jsonable_encoder
+    jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 336, in jsonable_encoder
+    return jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 288, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 317, in jsonable_encoder
+    return ENCODERS_BY_TYPE[type(obj)](obj)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 68, in <lambda>
+    bytes: lambda o: o.decode(),
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd3 in position 10: invalid continuation byte
+INFO:     127.0.0.1:51763 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51765 - "GET /api/v1/job-descriptions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51767 - "GET /api/v1/job-descriptions/16/analyses HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51769 - "GET /api/v1/audit-logs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51771 - "GET /api/v1/candidates/vault HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/protocols/http/httptools_impl.py", line 415, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/applications.py", line 1138, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 121, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 107, in app
+    response = await f(request)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 448, in app
+    content = await serialize_response(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 303, in serialize_response
+    return jsonable_encoder(response_content)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 302, in jsonable_encoder
+    jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 336, in jsonable_encoder
+    return jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 288, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 317, in jsonable_encoder
+    return ENCODERS_BY_TYPE[type(obj)](obj)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 68, in <lambda>
+    bytes: lambda o: o.decode(),
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd3 in position 10: invalid continuation byte
+INFO:     127.0.0.1:51774 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51776 - "POST /api/v1/analytics/project/16/synthesis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51780 - "GET /api/v1/audit-logs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51782 - "GET /api/v1/candidates/vault HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/protocols/http/httptools_impl.py", line 415, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/applications.py", line 1138, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 121, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 107, in app
+    response = await f(request)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 448, in app
+    content = await serialize_response(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 303, in serialize_response
+    return jsonable_encoder(response_content)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 302, in jsonable_encoder
+    jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 336, in jsonable_encoder
+    return jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 288, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 317, in jsonable_encoder
+    return ENCODERS_BY_TYPE[type(obj)](obj)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 68, in <lambda>
+    bytes: lambda o: o.decode(),
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd3 in position 10: invalid continuation byte
+INFO:     127.0.0.1:51784 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51786 - "GET /api/v1/audit-logs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51788 - "GET /api/v1/candidates/vault HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/protocols/http/httptools_impl.py", line 415, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/applications.py", line 1138, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 121, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 107, in app
+    response = await f(request)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 448, in app
+    content = await serialize_response(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 303, in serialize_response
+    return jsonable_encoder(response_content)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 302, in jsonable_encoder
+    jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 336, in jsonable_encoder
+    return jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 288, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 317, in jsonable_encoder
+    return ENCODERS_BY_TYPE[type(obj)](obj)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 68, in <lambda>
+    bytes: lambda o: o.decode(),
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd3 in position 10: invalid continuation byte
+INFO:     127.0.0.1:51791 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51793 - "GET /api/v1/interviews HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51797 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51799 - "GET /api/v1/audit-logs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51801 - "GET /api/v1/candidates/vault HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/protocols/http/httptools_impl.py", line 415, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/applications.py", line 1138, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 121, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 107, in app
+    response = await f(request)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 448, in app
+    content = await serialize_response(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 303, in serialize_response
+    return jsonable_encoder(response_content)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 302, in jsonable_encoder
+    jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 336, in jsonable_encoder
+    return jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 288, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 317, in jsonable_encoder
+    return ENCODERS_BY_TYPE[type(obj)](obj)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 68, in <lambda>
+    bytes: lambda o: o.decode(),
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd3 in position 10: invalid continuation byte
+INFO:     127.0.0.1:51803 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51805 - "GET /api/v1/job-descriptions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51807 - "GET /api/v1/job-descriptions/17/analyses HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51809 - "GET /api/v1/audit-logs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51811 - "GET /api/v1/candidates/vault HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/protocols/http/httptools_impl.py", line 415, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/applications.py", line 1138, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 121, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 107, in app
+    response = await f(request)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 448, in app
+    content = await serialize_response(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 303, in serialize_response
+    return jsonable_encoder(response_content)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 302, in jsonable_encoder
+    jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 336, in jsonable_encoder
+    return jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 288, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 317, in jsonable_encoder
+    return ENCODERS_BY_TYPE[type(obj)](obj)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/encoders.py", line 68, in <lambda>
+    bytes: lambda o: o.decode(),
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd3 in position 10: invalid continuation byte
+INFO:     127.0.0.1:51813 - "GET /api/v1/analyses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51815 - "GET /api/v1/interviews HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52431 - "GET /api/v1/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52559 - "POST /api/v1/token HTTP/1.1" 401 Unauthorized

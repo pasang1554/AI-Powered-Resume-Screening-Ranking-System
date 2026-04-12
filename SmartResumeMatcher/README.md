@@ -1,50 +1,37 @@
-# 🧠 Smart Resume Matcher (SaaS Edition)
+# 🌌 Smart Resume Matcher (Universal Singularity Edition v8.1)
 
-**AI-Powered Resume Screening & Ranking System**
+**AI-Powered Strategic Recruitment & Global Talent Singularity**
 
 ## 🚀 Project Overview
-A modern, Streamlit-based HR Dashboard that automates the resume screening process using Natural Language Processing (NLP). It compares candidate resumes against a job description (JD) to calculate match scores, identify missing skills, and rank candidates instantly.
+A world-class, institutional-grade recruitment intelligence platform. Evolving from a simple matcher into a unified **Talent Singularity**, the system manages the entire organizational life-cycle—from autonomous screening to global succession foresight.
 
-## ✨ Key Features
-- **📊 Interactive Dashboard**: A professional dark-themed UI with KPI cards and glassmorphism styling.
-- **🛠️ Sidebar Controls**: Easy access to file uploads and settings (Threshold Slider).
-- **📉 Advanced Analytics**:
-    - **Overview Tab**: Key metrics (Total Candidates, Shortlisted, Avg Score).
-    - **Rankings Tab**: Sortable data table with progress bars.
-    - **Detailed Tab**: Deep-dive analysis with missing skill tags and status badges.
-- **Inbox Export Logic**: Download the full ranking report as a CSV file.
-- **🧠 NLP Engine**: Uses TF-IDF and Cosine Similarity for accurate text matching.
-- **🤖 AI Integration**:
-    - **Expert Evaluation**: Provides a qualitative "Ready to Hire" assessment.
-    - **ATS Check**: Scores resumes on ATS friendliness.
-    - **Deep Insights**: Lists strengths, weaknesses, and missing critical skills using **Llama 3.1**.
+## ✨ Key Features (v8.1 Singularity Suite)
+- **🎭 Role-Adaptive UI**: Persona-based interface (Operator, Architect, Strategist) that dynamically reconfigures tools based on user context.
+- **🛡️ Autonomous Succession Regents**: AI agents that analyze the Talent Vault to predict leadership gaps and generate bridge-training roadmaps.
+- **🌌 Quantum Workforce Simulator**: 5-Year organizational health trajectory analysis with financial NPV impact projections.
+- **🤝 Human-AI Synergy Node**: Bidirectional feedback loops and cross-sector talent bridges (Quantum, Biotech, Space Governance).
+- **⚖️ Global Sovereignty Hub**: Enterprise-scale ethical alignment guardian and sovereignty monitor.
+- **⚛️ Kinetic 3D Visuals**: Immersive 3D kinetic clustering of global talent pools.
+- **📊 Elite Institutional Dashboard**: High-fidelity UI with glassmorphism, CSS-styled candidate cards, and real-time state persistence.
+- **🧠 Advanced NLP & Vision**: Multi-modal ingestion for video/audio signals alongside Llama 3.1 qualitative analysis.
 
+## 🛠️ Installation & Boot-Sequence
 
-
-## 🛠️ Installation
-
-1. **Clone the repository** (if applicable) or download the files.
-2. **Install dependencies**:
+1. **System Preparation**:
    ```bash
    pip install -r requirements.txt
    ```
-3. **Run the application**:
+2. **Global Credentials**: Add `GROQ_API_KEY` to your `.env` for the strategic foresight layer.
+3. **Launch Oracle**:
    ```bash
    python -m streamlit run app.py
    ```
 
-## 💡 How to Use
-1. **Upload Resumes**: Drag & drop PDF resumes in the **Sidebar**.
-2. **Input JD**: Paste the Job Description in the main text area.
-3. **Set Threshold**: Adjust the success threshold slider in the sidebar (default: 60%).
-4. **Analyze**: Click the "Analyze Candidates" button.
-5. **Explore Results**: Switch between the "Overview", "Ranking Table", and "Detailed Analysis" tabs.
-
-## 📁 Project Structure
-- `app.py`: Main application logic (UI, Layout, Visuals).
-- `utils.py`: Core NLP functions (Text Extraction, Cleaning, Similarity Calculation).
-- `requirements.txt`: List of dependencies.
-- `PROJECT_REPORT.md`: Techincal documentation and viva preparation.
+## 📁 Project Architecture
+- `app.py`: The Recruitment nervous system (UI, Navigation, Logic).
+- `utils.py`: Semantic intelligence and signal extraction layer.
+- `backend/`: High-performance FastAPI orchestration and DB persistence.
+- `PROJECT_REPORT.md`: Comprehensive technical thesis for academic submission.
 
 ---
-*Developed for Mini Project | CSE Department*
+*Developed for Mini Project | CSE Department | Universal Singularity Phase*

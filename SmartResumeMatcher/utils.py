@@ -29,8 +29,25 @@ try:
 except LookupError:
     nltk.download("averaged_perceptron_tagger")
 
-# Initialize lemmatizer
+# Initialize lemmatizer and stop words
 lemmatizer = WordNetLemmatizer()
+
+try:
+    GLOBAL_STOP_WORDS = set(stopwords.words("english"))
+except Exception:
+    GLOBAL_STOP_WORDS = {
+        "i", "me", "my", "myself", "we", "our", "ours", "ourselves", "you", "your", "yours", 
+        "yourself", "yourselves", "he", "him", "his", "himself", "she", "her", "hers", "herself", 
+        "it", "its", "itself", "they", "them", "their", "theirs", "themselves", "what", "which", 
+        "who", "whom", "this", "that", "these", "those", "am", "is", "are", "was", "were", "be", 
+        "been", "being", "have", "has", "had", "having", "do", "does", "did", "doing", "a", "an", 
+        "the", "and", "but", "if", "or", "because", "as", "until", "while", "of", "at", "by", "for", 
+        "with", "about", "against", "between", "into", "through", "during", "before", "after", "above", 
+        "below", "to", "from", "up", "down", "in", "out", "on", "off", "over", "under", "again", 
+        "further", "then", "once", "here", "there", "when", "where", "why", "how", "all", "any", 
+        "both", "each", "few", "more", "most", "other", "some", "such", "no", "nor", "not", "only", 
+        "own", "same", "so", "than", "too", "very", "s", "t", "can", "will", "just", "don", "should", "now"
+    }
 
 # Comprehensive tech skills taxonomy for semantic extraction
 TECH_SKILLS_TAXONOMY = {
@@ -268,6 +285,27 @@ def extract_text_from_pdf(uploaded_file):
         return None
 
 
+def extract_email(text):
+    """
+    Extracts the first email address found in the text using a standard regex.
+
+    Args:
+        text (str): Input text
+
+    Returns:
+        str: Extracted email address or None if not found
+    """
+    if not text:
+        return None
+    
+    # Standard email regex
+    email_pattern = r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
+    match = re.search(email_pattern, text)
+    if match:
+        return match.group(0)
+    return None
+
+
 def clean_text(text):
     """
     Advanced text cleaning with lemmatization.
@@ -390,198 +428,10 @@ def extract_semantic_skills(text):
         pattern = r"\b" + re.escape(skill.lower()) + r"\b"
         if re.search(pattern, text_lower):
             found_skills.add(skill)
-
-    # Additional extraction using NLP
     # Additional extraction using NLP
     tokens = word_tokenize(clean_text(text))
 
-    try:
-        stop_words = set(stopwords.words("english"))
-    except AttributeError:
-        # Fallback for NLTK LazyCorpusLoader error
-        stop_words = {
-            "i",
-            "me",
-            "my",
-            "myself",
-            "we",
-            "our",
-            "ours",
-            "ourselves",
-            "you",
-            "you're",
-            "you've",
-            "you'll",
-            "you'd",
-            "your",
-            "yours",
-            "yourself",
-            "yourselves",
-            "he",
-            "him",
-            "his",
-            "himself",
-            "she",
-            "she's",
-            "her",
-            "hers",
-            "herself",
-            "it",
-            "it's",
-            "its",
-            "itself",
-            "they",
-            "them",
-            "their",
-            "theirs",
-            "themselves",
-            "what",
-            "which",
-            "who",
-            "whom",
-            "this",
-            "that",
-            "that'll",
-            "these",
-            "those",
-            "am",
-            "is",
-            "are",
-            "was",
-            "were",
-            "be",
-            "been",
-            "being",
-            "have",
-            "has",
-            "had",
-            "having",
-            "do",
-            "does",
-            "did",
-            "doing",
-            "a",
-            "an",
-            "the",
-            "and",
-            "but",
-            "if",
-            "or",
-            "because",
-            "as",
-            "until",
-            "while",
-            "of",
-            "at",
-            "by",
-            "for",
-            "with",
-            "about",
-            "against",
-            "between",
-            "into",
-            "through",
-            "during",
-            "before",
-            "after",
-            "above",
-            "below",
-            "to",
-            "from",
-            "up",
-            "down",
-            "in",
-            "out",
-            "on",
-            "off",
-            "over",
-            "under",
-            "again",
-            "further",
-            "then",
-            "once",
-            "here",
-            "there",
-            "when",
-            "where",
-            "why",
-            "how",
-            "all",
-            "any",
-            "both",
-            "each",
-            "few",
-            "more",
-            "most",
-            "other",
-            "some",
-            "such",
-            "no",
-            "nor",
-            "not",
-            "only",
-            "own",
-            "same",
-            "so",
-            "than",
-            "too",
-            "very",
-            "s",
-            "t",
-            "can",
-            "will",
-            "just",
-            "don",
-            "don't",
-            "should",
-            "should've",
-            "now",
-            "d",
-            "ll",
-            "m",
-            "o",
-            "re",
-            "ve",
-            "y",
-            "ain",
-            "aren",
-            "aren't",
-            "couldn",
-            "couldn't",
-            "didn",
-            "didn't",
-            "doesn",
-            "doesn't",
-            "hadn",
-            "hadn't",
-            "hasn",
-            "hasn't",
-            "haven",
-            "haven't",
-            "isn",
-            "isn't",
-            "ma",
-            "mightn",
-            "mightn't",
-            "mustn",
-            "mustn't",
-            "needn",
-            "needn't",
-            "shan",
-            "shan't",
-            "shouldn",
-            "shouldn't",
-            "wasn",
-            "wasn't",
-            "weren",
-            "weren't",
-            "won",
-            "won't",
-            "wouldn",
-            "wouldn't",
-        }
-    except Exception:
-        stop_words = set()
+    stop_words = GLOBAL_STOP_WORDS
 
     # Look for compound skills (e.g., "machine learning")
     bigrams = [f"{tokens[i]} {tokens[i + 1]}" for i in range(len(tokens) - 1)]
@@ -735,6 +585,7 @@ def generate_skill_radar_data(job_description, resume_text):
 def evaluate_resume_with_groq(client, job_description, resume_text):
     """
     Evaluates a resume against a job description using the GROQ API.
+    Includes retry logic with exponential backoff for handling rate limits (429).
 
     Args:
         client (Groq): Initialized Groq client
@@ -744,20 +595,118 @@ def evaluate_resume_with_groq(client, job_description, resume_text):
     Returns:
         dict: Parsed JSON response from the LLM
     """
-    system_prompt = """You are an expert AI HR recruiter with 15+ years of experience in technical hiring.
-Your job is to evaluate candidate resumes against a given Job Description (JD).
-Be analytical, fair, and structured in your evaluation.
-Return output strictly in JSON format with the following structure:
+    import time
+    import random
+
+    system_prompt = """You are an Advanced Multilingual ATS (Applicant Tracking System).
+Your task is to analyze the relationship between a Job Description (JD) and a Resume content.
+
+GLOBAL INTELLIGENCE RULES:
+1. MULTILINGUAL SUPPORT: The Resume may be in any language (Spanish, French, German, Hindi, etc.). You must accurately translate and understand the candidate's experience in the context of the English Job Description.
+2. SEMANTIC CORRELATION: Focus on underlying skills and impact even if terminologies differ across languages.
+3. BLIND HIRING: If PII is redacted, strictly ignore demographics and focus only on competence.
+
+Return output strictly in JSON format:
 {
     "match_score": <number 0-100>,
     "hiring_status": "<'Ready to Hire' | 'Not Ready'>",
     "ats_friendly_score": <number 0-100>,
-    "is_ats_friendly": <boolean>,
-    "summary": "<brief executive summary>",
-    "strengths": ["<strength 1>", "<strength 2>", ...],
-    "weaknesses": ["<weakness 1>", "<weakness 2>", ...],
-    "missing_critical_skills": ["<skill 1>", "<skill 2>", ...],
-    "recommendation": "<'Strongly Hire' | 'Hire' | 'Weak Hire' | 'Reject'>"
+    "summary": "<2-sentence executive summary in English>",
+    "strengths": ["<top strength 1>", ...],
+    "weaknesses": ["<top weakness 1>", ...],
+    "recommendation": "<verdict>",
+    "custom_interview_questions": ["<top q1>", ...],
+    "red_flags": ["<hr red flag or 'None'>"],
+    "market_value": "<salary range>",
+    "resume_language": "<detected language>"
+}
+"""
+
+    user_prompt = f"""
+    Job Description:
+    {job_description}
+    
+    Candidate Resume (Truncated for API Context):
+    {resume_text[:10000]}
+    """
+
+    max_retries = 3
+    base_delay = 2  # seconds
+
+    for attempt in range(max_retries + 1):
+        try:
+            completion = client.chat.completions.create(
+                model="llama-3.1-8b-instant",
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_prompt},
+                ],
+                temperature=0.2,
+                max_tokens=600,
+                top_p=1,
+                stream=False,
+                stop=None,
+            )
+
+            response_content = completion.choices[0].message.content
+            # Try to parse JSON strictly
+            try:
+                return json.loads(response_content)
+            except json.JSONDecodeError:
+                # If standard parsing fails, try to find JSON block
+                import re
+
+                json_match = re.search(r"\{.*\}", response_content, re.DOTALL)
+                if json_match:
+                    return json.loads(json_match.group(0))
+                else:
+                    return {
+                        "error": "Failed to parse JSON response",
+                        "raw_content": response_content,
+                    }
+
+        except Exception as e:
+            error_msg = str(e)
+            if "429" in error_msg and attempt < max_retries:
+                # Exponential backoff with jitter
+                delay = (base_delay * (2 ** attempt)) + (random.random() * 1.5)
+                print(f"Rate limit hit. Retrying in {delay:.2f} seconds (Attempt {attempt + 1}/{max_retries})...")
+                time.sleep(delay)
+                continue
+            
+            return {"error": error_msg}
+
+
+def generate_ats_coaching(client, job_description, resume_text):
+    """
+    Generates personalized ATS coaching and improvement tips for a candidate.
+    
+    Args:
+        client (Groq): Initialized Groq client
+        job_description (str): Job Description text
+        resume_text (str): Resume text
+
+    Returns:
+        dict: Coaching tips and improvement plan
+    """
+    import time
+    import random
+
+    system_prompt = """You are a professional Career Coach and Resume Expert.
+Your goal is to provide highly specific, actionable advice to help a candidate improve their resume for a specific Job Description.
+Be encouraging but critical. Focus on:
+1. Missing technical skills that are in the JD.
+2. Formatting and ATS readability.
+3. Quantifying achievements (using metrics/percentages).
+4. Keywords that should be emphasized.
+
+Return output strictly in JSON format with:
+{
+    "overall_feedback": "<brief motivational summary>",
+    "critical_fixes": ["<fix 1>", ...],
+    "suggested_additions": ["<skill or project to add>", ...],
+    "formatting_tips": ["<tip 1>", ...],
+    "impact_statements": ["<example of how to rewrite a bullet point to show impact>", ...]
 }
 """
 
@@ -769,6 +718,62 @@ Return output strictly in JSON format with the following structure:
     {resume_text}
     """
 
+    max_retries = 3
+    base_delay = 2
+
+    for attempt in range(max_retries + 1):
+        try:
+            completion = client.chat.completions.create(
+                model="llama-3.1-8b-instant",
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_prompt},
+                ],
+                temperature=0.4,
+                max_tokens=800,
+            )
+
+            response_content = completion.choices[0].message.content
+            try:
+                return json.loads(response_content)
+            except:
+                import re
+                json_match = re.search(r"\{.*\}", response_content, re.DOTALL)
+                if json_match:
+                    return json.loads(json_match.group(0))
+                return {"error": "Failed to parse coaching JSON"}
+
+        except Exception as e:
+            if "429" in str(e) and attempt < max_retries:
+                time.sleep(base_delay * (2 ** attempt) + random.random())
+                continue
+            return {"error": str(e)}
+
+
+def generate_interview_scorecard(client, job_description):
+    """
+    Generates a structured interview scorecard with specific evaluation criteria
+    and scoring rubrics based on the Job Description.
+    """
+    system_prompt = """You are an Expert Technical Interviewer. 
+Create a detailed, structured interview scorecard for the provided Job Description.
+Return output strictly in JSON format:
+{
+    "evaluation_criteria": [
+        {
+            "category": "<e.g., Python Architecture>",
+            "weight": <0.0-1.0>,
+            "key_questions": ["<q1>", "<q2>"],
+            "look_for": ["<indicator 1>", "<indicator 2>"]
+        },
+        ...
+    ],
+    "behavioral_questions": ["<q1>", "<q2>"],
+    "overall_scorecard_notes": "<advice for the interviewer>"
+}
+"""
+    user_prompt = f"Job Description:\n{job_description}"
+
     try:
         completion = client.chat.completions.create(
             model="llama-3.1-8b-instant",
@@ -776,32 +781,170 @@ Return output strictly in JSON format with the following structure:
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_prompt},
             ],
-            temperature=0.2,
+            temperature=0.3,
             max_tokens=1000,
-            top_p=1,
-            stream=False,
-            stop=None,
         )
-
         response_content = completion.choices[0].message.content
-        # Try to parse JSON strictly
-        try:
-            return json.loads(response_content)
-        except json.JSONDecodeError:
-            # If standard parsing fails, try to find JSON block
-            import re
-
-            json_match = re.search(r"\{.*\}", response_content, re.DOTALL)
-            if json_match:
-                return json.loads(json_match.group(0))
-            else:
-                return {
-                    "error": "Failed to parse JSON response",
-                    "raw_content": response_content,
-                }
-
+        import json
+        import re
+        json_match = re.search(r"\{.*\}", response_content, re.DOTALL)
+        if json_match:
+            return json.loads(json_match.group(0))
+        return {"error": "Failed to parse scorecard JSON"}
     except Exception as e:
         return {"error": str(e)}
+
+
+def optimize_jd(client, raw_content):
+    """
+    Optimizes a raw JD for clarity, professionalism, and bias elimination.
+    """
+    system_prompt = """You are an Expert Recruitment Consultant. 
+Enhance the provided raw job description content.
+- Fix grammar and formatting.
+- Ensure the tone is professional but welcoming.
+- Remove any biased language.
+- Structure logically: Summary, Responsibilities, Requirements.
+Return ONLY the optimized text.
+"""
+    try:
+        completion = client.chat.completions.create(
+            model="llama-3.1-8b-instant",
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": f"Raw Content:\n{raw_content}"},
+            ],
+            temperature=0.3,
+            max_tokens=1500,
+        )
+        return completion.choices[0].message.content
+    except Exception as e:
+        return f"Error: {e}"
+
+
+def generate_jd(client, role_title, key_points):
+    """
+    Generates a full JD from a role title and brief key points.
+    """
+    system_prompt = """You are an Expert HR Professional.
+Generate a comprehensive, high-quality Job Description based on the Title and Key Points provided.
+Structure:
+1. Role Summary
+2. Core Responsibilities
+3. Required Technical Skills
+4. Soft Skills & Qualifications
+5. Nice to Have
+"""
+    try:
+        completion = client.chat.completions.create(
+            model="llama-3.1-8b-instant",
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": f"Title: {role_title}\nKey Points: {key_points}"},
+            ],
+            temperature=0.7,
+            max_tokens=2000,
+        )
+        return completion.choices[0].message.content
+    except Exception as e:
+        return f"Error: {e}"
+
+
+def simulate_candidate_response(client, resume_text, job_description, question):
+    """
+    Simulates a candidate's response to an interview question using their resume context.
+    """
+    system_prompt = f"""You are the candidate described in the provided Resume.
+Your goal is to answer an interview question based on your experience and the Job Description.
+Stay in character. Be professional, highlight your relevant skills, and be honest about your experience.
+If the question is about a skill you don't have (based on the resume), acknowledge it but mention 
+your willingness to learn or related skills.
+
+MATCHING CONTEXT:
+Job Description: {job_description}
+"""
+    try:
+        completion = client.chat.completions.create(
+            model="llama-3.1-8b-instant",
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": f"Resume:\n{resume_text}\n\nInterviewer Question: {question}"},
+            ],
+            temperature=0.6,
+            max_tokens=800,
+        )
+        return completion.choices[0].message.content
+    except Exception as e:
+        return f"Error simulating response: {e}"
+
+
+def generate_enterprise_brief(analyses_data, project_title, jd_content):
+    """
+    Generates a professional project-wide Recruitment Brief PDF.
+    """
+    from reportlab.lib.pagesizes import letter
+    from reportlab.lib import colors
+    from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, PageBreak
+    from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+    import io
+
+    buffer = io.BytesIO()
+    doc = SimpleDocTemplate(buffer, pagesize=letter)
+    styles = getSampleStyleSheet()
+    story = []
+
+    # Title
+    story.append(Paragraph(f"Recruitment Intelligence Brief: {project_title}", styles['Title']))
+    story.append(Spacer(1, 12))
+
+    # JD Summary
+    story.append(Paragraph("Project Job Description", styles['Heading2']))
+    jd_snippet = jd_content[:500] + "..." if jd_content else "No JD content provided."
+    story.append(Paragraph(jd_snippet, styles['BodyText']))
+    story.append(Spacer(1, 12))
+
+    # Analytics Summary
+    story.append(Paragraph("Pipeline Strategic Overview", styles['Heading2']))
+    total = len(analyses_data)
+    if total > 0:
+        avg_score = sum(a.get('match_score', 0) for a in analyses_data) / total
+        story.append(Paragraph(f"Total Candidates Analyzed: {total}", styles['BodyText']))
+        story.append(Paragraph(f"Average Match Score: {avg_score:.1f}%", styles['BodyText']))
+    else:
+        story.append(Paragraph("No candidate data available for this project yet.", styles['BodyText']))
+    story.append(Spacer(1, 12))
+
+    # Candidates Table
+    story.append(Paragraph("Candidate Rankings & Top Picks", styles['Heading2']))
+    data = [["Candidate", "Score", "Skills", "Status"]]
+    
+    sorted_analyses = sorted(analyses_data, key=lambda x: x.get('match_score', 0), reverse=True)[:10]
+    
+    if sorted_analyses:
+        for a in sorted_analyses:
+            data.append([
+                a.get('candidate_name', 'Unknown'), 
+                f"{a.get('match_score', 0)}%", 
+                ", ".join(a.get('matched_skills', [])[:3]) if a.get('matched_skills') else "N/A",
+                a.get('status', 'New')
+            ])
+    else:
+        data.append(["N/A", "N/A", "N/A", "N/A"])
+    
+    t = Table(data, colWidths=[150, 50, 200, 80])
+    t.setStyle(TableStyle([
+        ('BACKGROUND', (0, 0), (-1, 0), colors.cadetblue),
+        ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
+        ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+        ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+        ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
+        ('GRID', (0, 0), (-1, -1), 1, colors.grey)
+    ]))
+    story.append(t)
+    
+    doc.build(story)
+    buffer.seek(0)
+    return buffer.getvalue()
 
 
 def detect_experience_years(text):
@@ -863,8 +1006,37 @@ def calculate_ats_score(text):
     return max(0, min(100, score))
 
 
-def calculate_detailed_match(job_description, resume_text):
-    """Calculates detailed breakdown of match score."""
+def redact_pii(text):
+    """
+    Redacts Personal Identifiable Information (PII) from text.
+    Masks emails, phone numbers, and common social media/professional links.
+    """
+    if not text:
+        return text
+    
+    # 1. Redact Emails
+    email_pattern = r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
+    text = re.sub(email_pattern, "[EMAIL_REDACTED]", text)
+    
+    # 2. Redact Phone Numbers (Common formats)
+    phone_pattern = r'(\+?\d{1,3}[-.\s]?)?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}'
+    text = re.sub(phone_pattern, "[PHONE_REDACTED]", text)
+    
+    # 3. Redact Web Links (LinkedIn, Portfolios, etc.)
+    url_pattern = r'https?://[^\s<>"]+|www\.[^\s<>"]+'
+    # Special care for common professional links
+    text = re.sub(url_pattern, "[LINK_REDACTED]", text)
+    
+    # 4. Redact potential name patterns (Address/Location placeholders often follow names)
+    # This is a bit risky but we can mask common "Location: ..." blocks
+    location_pattern = r'(?i)location\s*:\s*.*'
+    text = re.sub(location_pattern, "Location: [REDACTED]", text)
+    
+    return text
+
+
+def calculate_detailed_match(job_description, resume_text, weighted_skills=None):
+    """Calculates detailed breakdown of match score with optional skill weighting."""
     jd_clean = clean_text(job_description)
     resume_clean = clean_text(resume_text)
     jd_lower = job_description.lower()
@@ -877,7 +1049,20 @@ def calculate_detailed_match(job_description, resume_text):
     # 1. Skill Match (50% of total)
     if jd_skills:
         matched = [s for s in jd_skills if s.lower() in resume_lower]
-        skill_score = (len(matched) / len(jd_skills)) * 50
+        
+        score_weight = len(matched)
+        total_weight = len(jd_skills)
+
+        # Apply 5x weight to priority skills
+        if weighted_skills:
+            for s in jd_skills:
+                # Check if this JD skill is one of the priority ones
+                if any(w.lower() in s.lower() for w in weighted_skills):
+                    total_weight += 4 # 1 (original) + 4 = 5x
+                    if s.lower() in resume_lower:
+                        score_weight += 4
+        
+        skill_score = (score_weight / total_weight) * 50
     else:
         skill_score = 25
 
@@ -942,4 +1127,35 @@ def calculate_detailed_match(job_description, resume_text):
         "matched_skills": matched if jd_skills else [],
         "all_resume_skills": resume_skills,
         "years_experience": resume_exp,
+        "email": extract_email(resume_text)
     }
+
+def generate_ics_content(candidate_name, role_title, interview_date, medium, interviewer_email):
+    """
+    Generates iCalendar (.ics) content for an interview.
+    """
+    from datetime import timedelta
+    import uuid
+    
+    dt_start = interview_date.strftime("%Y%m%dT%H%M%SZ")
+    dt_end = (interview_date + timedelta(hours=1)).strftime("%Y%m%dT%H%M%SZ")
+    dt_now = datetime.utcnow().strftime("%Y%m%dT%H%M%SZ")
+    uid = str(uuid.uuid4())
+
+    lines = [
+        "BEGIN:VCALENDAR",
+        "VERSION:2.0",
+        "PRODID:-//Smart Resume Matcher//EN",
+        "BEGIN:VEVENT",
+        f"UID:{uid}",
+        f"DTSTAMP:{dt_now}",
+        f"DTSTART:{dt_start}",
+        f"DTEND:{dt_end}",
+        f"SUMMARY:Interview: {candidate_name} for {role_title}",
+        f"DESCRIPTION:Interview scheduled via Smart Resume Matcher.\\nMedium: {medium}",
+        f"LOCATION:{medium}",
+        f"ORGANIZER;CN=Recruitment Team:MAILTO:{interviewer_email}",
+        "END:VEVENT",
+        "END:VCALENDAR"
+    ]
+    return "\n".join(lines)

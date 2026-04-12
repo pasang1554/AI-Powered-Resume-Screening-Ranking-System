@@ -56,10 +56,11 @@ GROQ_API_KEY=your-groq-api-key
 
 ## Production Checklist
 
-- [ ] Change SECRET_KEY
-- [ ] Enable HTTPS
+- [x] Configure SECRET_KEY in `.env`
+- [x] Set up DATABASE_URL in `.env`
+- [ ] Enable HTTPS (via Cloud Provider)
 - [ ] Set up monitoring (Sentry)
-- [ ] Configure rate limiting
-- [ ] Add proper CORS origins
+- [x] Configure rate limiting (Implemented in FastAPI logic)
+- [x] Add proper CORS origins (Configured in `main.py`)
 - [ ] Set up CI/CD pipeline
-- [ ] Add database backups
+- [x] Add database backups (Implemented in `Resilience Hub`)

@@ -1,25 +1,11 @@
-version: '3.8'
-
 services:
-  api:
+  smart-resume-matcher:
     build: .
     ports:
       - "8000:8000"
-    volumes:
-      - ./backend:/app/backend
-    environment:
-      - PYTHONUNBUFFERED=1
-    command: uvicorn backend.main:app --host 0.0.0.0 --port 8000 --reload
-
-  streamlit:
-    image: python:3.11-slim
-    ports:
       - "8501:8501"
+    env_file:
+      - .env
     volumes:
-      - .:/app
-    working_dir: /app/SmartResumeMatcher
-    command: >
-      bash -c "pip install -q streamlit pandas numpy altair plotly PyPDF2 scikit-learn nltk python-jose passlib sqlalchemy fastapi uvicorn && 
-      streamlit run app.py --server.port 8501 --server.address 0.0.0.0"
-    depends_on:
-      - api
+      - ./smartresume.db:/app/smartresume.db
+    restart: always
