@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap');
+
+:root {
+    --primary: #6366f1;
+    --primary-hover: #4f46e5;
+    --bg-main: #020617;
+    --text-main: #F8FAFC;
+    --text-dim: #94A3B8;
+    --border: rgba(255, 255, 255, 0.08);
+}
+
+.stApp {
+    background: radial-gradient(circle at 50% -20%, #1e1b4b, #020617);
+    color: var(--text-main);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+#MainMenu, footer { visibility: hidden; }
+
+/* Institutional Card v2 */
+.modern-card {
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 3rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* Hero v7.2 */
+.hero-v7 h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 5rem;
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    background: linear-gradient(135deg, #FFF 0%, #6366F1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Premium Inputs v7.2 */
+.stTextInput > div > div > input, .stTextArea > div > div > textarea {
+    background: rgba(2, 6, 23, 0.8) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 12px !important;
+    color: white !important;
+    padding: 1rem !important;
+    font-size: 1rem !important;
+}
+
+.stTextInput > div > div > input:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2) !important;
+}
+
+/* Button & Tabs v7.2 */
+.stButton > button {
+    background: var(--primary) !important;
+    border-radius: 12px !important;
+    font-weight: 700 !important;
+    font-family: 'Outfit', sans-serif !important;
+    letter-spacing: 0.01em !important;
+    height: 3.2rem !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.stButton > button:hover {
+    background: var(--primary-hover) !important;
+    transform: scale(1.02) !important;
+}
+
+.stTabs [data-baseweb="tab-list"] { 
+    background: rgba(255,255,255,0.03); 
+    border-radius: 12px;
+    padding: 4px;
+    margin-bottom: 24px;
+}
+.stTabs [data-baseweb="tab"] {
+    border-radius: 8px;
+    color: var(--text-dim);
+    transition: all 0.2s ease;
+}
+.stTabs [aria-selected="true"] {
+    background: rgba(255,255,255,0.05) !important;
+    color: white !important;
+}
+
+/* METRICS v7.2 */
+.top-metric {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 2.5rem;
+}

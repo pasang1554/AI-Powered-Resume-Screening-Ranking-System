@@ -127,10 +127,22 @@ def extract_skills(text: str) -> List[str]:
     found_skills = []
 
     for skill in SKILL_KEYWORDS:
-        if skill.lower() in text_lower:
-            found_skills.append(skill.title() if len(skill) > 3 else skill.upper())
+        pattern = r"\b" + re.escape(skill.lower()) + r"\b"
+        if re.search(pattern, text_lower):
+            s_low = skill.lower()
+            if s_low in ["fastapi", "nodejs", "nextjs"]:
+                res = s_low.replace("api", "API").replace("js", "JS")
+                res = res[0].upper() + res[1:]
+                found_skills.append(res)
+            elif len(s_low) <= 3 or s_low in ["html", "css", "sql", "aws", "gcp", "ci/cd"]:
+                found_skills.append(s_low.upper())
+            else:
+                found_skills.append(s_low.title())
 
     return list(set(found_skills))
+
+
+
 
 
 def calculate_tfidf_similarity(text1: str, text2: str) -> float:

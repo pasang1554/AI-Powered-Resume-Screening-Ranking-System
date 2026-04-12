@@ -17,15 +17,31 @@ A world-class, institutional-grade recruitment intelligence platform. Evolving f
 
 ## 🛠️ Installation & Boot-Sequence
 
+### Option A: Local Development (Manual)
 1. **System Preparation**:
    ```bash
-   pip install -r requirements.txt
+   pip install -r requirements-api.txt
+   pip install -r requirements-frontend.txt
    ```
-2. **Global Credentials**: Add `GROQ_API_KEY` to your `.env` for the strategic foresight layer.
-3. **Launch Oracle**:
+2. **Launch Services**:
+   - Backend: `uvicorn backend.main:app --reload`
+   - Frontend: `streamlit run app.py`
+
+### Option B: Production Deployment (Docker)
+1. **Orchestrate via Compose**:
    ```bash
-   python -m streamlit run app.py
+   docker-compose up --build
    ```
+   *This launches the Backend (Port 8000) and Frontend (Port 8501) as isolated services.*
+
+### Option C: Institutional Quality Assurance (Tests)
+1. **Run Full Suite**:
+   ```bash
+   ./scripts/test_runner.sh
+   ```
+   *Verifies core intelligence logic and API stability with coverage reporting.*
+
+
 
 ## 📁 Project Architecture
 - `app.py`: The Recruitment nervous system (UI, Navigation, Logic).

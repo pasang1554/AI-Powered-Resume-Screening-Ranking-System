@@ -1,66 +1,53 @@
-# Deployment Guide
+# 🌌 Cloud Sovereignty: 'One-Click' Deployment Guide
 
-## Cloud Deployment Options
+This guide describes how to deploy the **Universal Talent Singularity (v8.1)** to the cloud using **Render** or **Railway**. By following these steps, you will transition the ecosystem from a local environment to a managed, high-availability institutional cloud.
 
-### 1. Railway (Easiest)
+---
 
-1. Push to GitHub
-2. Connect to Railway.app
-3. Auto-deploys with Dockerfile
+## 🚀 One-Click Deploy (Render.com)
 
-### 2. Render
+Render uses the `render.yaml` "Blueprint" included in this project to orchestrate your entire stack.
 
-1. Create `render.yaml`:
-```yaml
-services:
-  - type: web
-    name: resume-api
-    dockerfilePath: ./Dockerfile
-    envVars:
-      - key: DATABASE_URL
-        value: sqlite:///data.db
-```
+### 1. Connect your Repository
+1. Log in to your [Render Dashboard](https://dashboard.render.com).
+2. Click **New +** -> **Blueprint**.
+3. Connect your GitHub repository.
 
-### 3. Fly.io
+### 2. Configure Institutional Secrets
+During the Blueprint setup, you will be prompted for environment variables. Ensure the following are set:
+- **`GROQ_API_KEY`**: Your live Groq API key (Required for AI Analysis).
+- **`SECRET_KEY`**: A long, random string for JWT security (If not generated automatically).
+- **`DATABASE_URL`**: This will be automatically linked via the included PostgreSQL service.
 
-```bash
-fly launch
-fly deploy
-```
+### 3. Deploy
+1. Click **Apply**.
+2. Render will automatically spin up:
+   - **`singularity-api`**: The FastAPI Backend.
+   - **`singularity-dashboard`**: The Streamlit Frontend.
+   - **`singularity-db`**: The Managed PostgreSQL database.
 
-### 4. AWS ECS / Google Cloud Run
+---
 
-Use the Dockerfile for container deployment.
+## ⚡ Deployment via Railway.app
 
-## Frontend (Streamlit)
+Railway utilizes the `Procfile` and Dockerfiles for deployment.
 
-### Streamlit Cloud (Free)
+1.  Connect your GitHub repository to a new Railway project.
+2.  Railway will detect the Dockerfiles.
+3.  Add two services:
+    -   **Backend**: Set the build command to use `Dockerfile.backend`.
+    -   **Frontend**: Set the build command to use `Dockerfile.frontend`.
+4.  Add a **Postgres** plugin to your project.
+5.  Set the `API_URL` environment variable for the Frontend to point to your Railway Backend URL.
 
-1. Push to GitHub
-2. Connect at streamlit.io/cloud
-3. Deploy directly
+---
 
-### HuggingFace Spaces (Free GPU)
+## 🛡️ Post-Deployment Health Check
 
-1. Create new Space
-2. Upload code
-3. Auto-builds container
+Once live, verify your deployment:
+- **API Health**: Visit `https://your-api-name.onrender.com/health` (Should return `{"status": "healthy"}`).
+- **Neural Docs**: Visit `https://your-api-name.onrender.com/docs` to verify all recruitment modules are active.
+- **Strategic Dashboard**: Visit the Frontend URL to begin global talent mapping.
 
-## Environment Variables
-
-```env
-DATABASE_URL=sqlite:///./smartresume.db
-SECRET_KEY=your-secure-secret-key
-GROQ_API_KEY=your-groq-api-key
-```
-
-## Production Checklist
-
-- [x] Configure SECRET_KEY in `.env`
-- [x] Set up DATABASE_URL in `.env`
-- [ ] Enable HTTPS (via Cloud Provider)
-- [ ] Set up monitoring (Sentry)
-- [x] Configure rate limiting (Implemented in FastAPI logic)
-- [x] Add proper CORS origins (Configured in `main.py`)
-- [ ] Set up CI/CD pipeline
-- [x] Add database backups (Implemented in `Resilience Hub`)
+---
+*End of Institutional Cloud Roadmap*

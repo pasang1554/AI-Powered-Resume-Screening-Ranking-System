@@ -1,0 +1,54 @@
+# 🚀 Institutional Talent Singularity (v8.1) - Deployment Blueprint
+# Deploy this directly to Render.com for a coordinated cloud ecosystem.
+
+services:
+  # ---------------------------------------------------------------------------
+  # NEURAL API (FASTAPI BACKEND)
+  # ---------------------------------------------------------------------------
+  - type: web
+    name: singularity-api
+    env: docker
+    dockerContext: .
+    dockerfilePath: Dockerfile.backend
+    plan: free
+    region: oregon
+    healthCheckPath: /health
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: singularity-db
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: GROQ_API_KEY
+        sync: false # Set this in the Render Dashboard
+      - key: ENVIRONMENT
+        value: production
+
+  # ---------------------------------------------------------------------------
+  # STRATEGIC DASHBOARD (STREAMLIT FRONTEND)
+  # ---------------------------------------------------------------------------
+  - type: web
+    name: singularity-dashboard
+    env: docker
+    dockerContext: .
+    dockerfilePath: Dockerfile.frontend
+    plan: free
+    region: oregon
+    envVars:
+      - key: API_URL
+        fromService:
+          type: web
+          name: singularity-api
+          property: host
+        suffix: /api/v1
+      - key: ENVIRONMENT
+        value: production
+
+# ---------------------------------------------------------------------------
+# GLOBAL PERSISTENCE (POSTGRESQL)
+# ---------------------------------------------------------------------------
+databases:
+  - name: singularity-db
+    plan: free
+    region: oregon

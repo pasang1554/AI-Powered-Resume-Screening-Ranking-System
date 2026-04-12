@@ -1,1 +1,9 @@
-# Routes package
+# Modular API Routes
+from . import auth
+from . import job_descriptions
+from . import analysis
+from . import candidates
+from . import interviews
+from . import analytics
+from . import public
+from . import audit
