@@ -26,6 +26,11 @@ load_dotenv()
 
 # Configuration
 API_URL = os.getenv("API_URL", "http://localhost:8000/api/v1")
+
+# Schema Guard: Ensure API_URL has a scheme (important for Render Blueprints)
+if API_URL and not API_URL.startswith(("http://", "https://")):
+    API_URL = f"https://{API_URL}"
+
 st.set_page_config(
     page_title="Smart Resume Matcher",
     page_icon="🌌",
