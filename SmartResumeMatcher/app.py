@@ -220,7 +220,7 @@ elif nav_mode == "🔍 New Analysis":
                         st.success("Analysis Complete!")
                         st.rerun()
                     else: st.error(f"Analysis failed: {res.text}")
-                except Exception as e: st.error(f"Connection error: {e}")
+                except Exception as e: st.error(f"Connection error (URL: {API_URL}): {e}")
 
     if st.session_state.results:
         render_analysis_dashboard(
