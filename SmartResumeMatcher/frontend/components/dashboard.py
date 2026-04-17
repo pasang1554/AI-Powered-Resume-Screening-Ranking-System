@@ -3,11 +3,15 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
-def render_analysis_dashboard(results):
+from frontend.components.intelligence import render_intelligence_suite
+
+def render_analysis_dashboard(results, jd_content, sidebar_data, api_url, auth_header):
     if not results:
         return
 
     df = pd.DataFrame(results)
+    groq_key = sidebar_data.get("groq_api_key") if isinstance(sidebar_data, dict) else ""
+
     st.markdown(
         """<div style="background: linear-gradient(90deg, #6366F1, #4F46E5); padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem;">
             <h2 style="margin: 0; color: white; display: flex; align-items: center; gap: 0.5rem;">
@@ -41,7 +45,7 @@ def render_analysis_dashboard(results):
     st.markdown("<br>", unsafe_allow_html=True)
     
     # Leaderboard and Charts
-    tab_overview, tab_visuals = st.tabs(["🏆 Results Leaderboard", "📈 Neural Insights"])
+    tab_overview, tab_visuals, tab_intelligence = st.tabs(["🏆 Results Leaderboard", "📈 Neural Insights", "🧠 Intelligence Deep-Dive"])
     
     with tab_overview:
         # Simplified candidate table for readability
@@ -59,3 +63,28 @@ def render_analysis_dashboard(results):
             fig_exp = px.scatter(df, x="Experience", y="Score", size="ATS", color="Status",
                                title="Experience vs. Score Analysis", template="plotly_dark")
             st.plotly_chart(fig_exp, use_container_width=True)
+
+    with tab_intelligence:
+        st.markdown("#### Selection Module")
+        
+        # Robust candidate selection handling
+        candidate_list = df["Candidate"].tolist()
+        default_index = 0
+        if st.session_state.get("focus_candidate_name") in candidate_list:
+            default_index = candidate_list.index(st.session_state.focus_candidate_name)
+            
+        selected_name = st.selectbox(
+            "Select Candidate for Deep Intelligence",
+            options=candidate_list,
+            index=default_index
+        )
+        # Update focus for persistence
+        st.session_state.focus_candidate_name = selected_name
+        
+        if not groq_key:
+            st.warning("⚠️ **Neural Engine Restricted:** Groq API Key missing. Please provide a key in the sidebar to unlock Deep AI Evaluation, Coaching, and Scorecards.")
+            # Still render basic match details from candidate_data if any
+        
+        candidate_data = next((r for r in results if r["Candidate"] == selected_name), None)
+        if candidate_data:
+            render_intelligence_suite(candidate_data, jd_content, groq_key, api_url, auth_header)

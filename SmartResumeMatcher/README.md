@@ -7,13 +7,12 @@ A world-class, institutional-grade recruitment intelligence platform. Evolving f
 
 ## ✨ Key Features (v8.1 Singularity Suite)
 - **🎭 Role-Adaptive UI**: Persona-based interface (Operator, Architect, Strategist) that dynamically reconfigures tools based on user context.
-- **🛡️ Autonomous Succession Regents**: AI agents that analyze the Talent Vault to predict leadership gaps and generate bridge-training roadmaps.
-- **🌌 Quantum Workforce Simulator**: 5-Year organizational health trajectory analysis with financial NPV impact projections.
-- **🤝 Human-AI Synergy Node**: Bidirectional feedback loops and cross-sector talent bridges (Quantum, Biotech, Space Governance).
-- **⚖️ Global Sovereignty Hub**: Enterprise-scale ethical alignment guardian and sovereignty monitor.
-- **⚛️ Kinetic 3D Visuals**: Immersive 3D kinetic clustering of global talent pools.
-- **📊 Elite Institutional Dashboard**: High-fidelity UI with glassmorphism, CSS-styled candidate cards, and real-time state persistence.
-- **🧠 Advanced NLP & Vision**: Multi-modal ingestion for video/audio signals alongside Llama 3.1 qualitative analysis.
+- **🧠 Intelligence Deep-Dive**: Groq-powered qualitative analysis including ATS Coaching, Interview Scorecards, and Candidate Roleplay Simulations.
+- **🌍 Public Career Portal**: An unauthenticated application gateway for external talent with autonomous AI ingestion.
+- **🤝 Strategic Interview Orchestration**: Integrated session management with .ics calendar export and institutional feedback loops.
+- **📊 Institutional Insights Dashboard**: High-fidelity analytics covering Skill Scarcity, Recruitment ROI, and Quantum Workforce Roadmaps.
+- **📥 Intelligence PDF Export**: Branded report generation for candidate profiles and AI verdicts.
+- **🛡️ Neural Safeguards**: Blind hiring mode to redact PII and ensure ethical talent discovery.
 
 ## 🛠️ Installation & Boot-Sequence
 

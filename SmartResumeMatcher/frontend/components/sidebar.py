@@ -5,8 +5,7 @@ from frontend.utils.constants import SAMPLE_JD, SAMPLE_RESUME_1, SAMPLE_RESUME_2
 def render_sidebar():
     with st.sidebar:
         try:
-            # Replaced hardcoded path with a more flexible one or a fallback
-            st.image("https://raw.githubusercontent.com/pasang1554/AI-Powered-Resume-Screening-Ranking-System/main/logo.png", width='stretch')
+            st.image("frontend/assets/logo.png", width=250)
         except:
             st.markdown("### 🤖 ResumeAI")
         
@@ -19,17 +18,44 @@ def render_sidebar():
         )
         
         st.markdown("---")
+        
+        # Determine context-based visibility
+        entry_mode = st.session_state.get("entry_mode")
+        
+        # IF ON LANDING PAGE
+        if entry_mode is None:
+            st.info("🔐 Please select a portal on the main screen to begin.")
+            return None
+
+        # IF ON PUBLIC PORTAL
+        if entry_mode == "Public":
+            st.markdown("#### 🌍 Candidate View")
+            st.markdown("Direct applicant-to-neural-core ingestion is active.")
+            st.markdown("---")
+            return {
+                "threshold": 50,
+                "blind_hiring": True,
+                "groq_api_key": os.getenv("GROQ_API_KEY", ""),
+                "priority_skills": []
+            }
+
+        # RECRUITER / INSTITUTIONAL MODE
         if st.session_state.get("token") is not None:
             st.success("✅ Authenticated")
             st.markdown("---")
             st.markdown("#### 🎭 Strategic Context")
             intelligence_role = st.segmented_control("Active Persona", ["Operator", "Architect", "Strategist"], default="Operator")
             
-            if st.button("Logout", width='stretch'):
+            if st.button("🚪 Logout & Exit Portal", width='stretch', key="logout_btn_sidebar"):
+                # Reset all session state variables to return to Gateway selection
                 st.session_state.token = None
+                st.session_state.entry_mode = None
+                st.session_state.results = None
+                st.session_state.job_desc_input = ""
+                st.session_state.focus_candidate_name = None
                 st.rerun()
             st.markdown("---")
-            return intelligence_role
+            # We no longer return early here, we continue to gather threshold/keys
 
         if st.button("🚀 Load Sample Data", width='stretch'):
             st.session_state.demo_loaded = True
@@ -72,9 +98,15 @@ def render_sidebar():
             unsafe_allow_html=True,
         )
         
-        return {
+        data = {
             "threshold": threshold,
             "blind_hiring": blind_hiring,
             "groq_api_key": groq_api_key,
             "priority_skills": priority_skills
         }
+        
+        # Add intelligence role if authenticated
+        if st.session_state.get("token") is not None:
+            data["intelligence_role"] = intelligence_role
+            
+        return data

@@ -19,6 +19,7 @@ def load_project_to_dashboard(jd_id, API_URL, auth_header):
             for r in raw_results:
                 ui_results.append({
                     "id": r.get("id"),
+                    "candidate_id": r.get("candidate_id"),
                     "Candidate": r.get("candidate_name"),
                     "Score": r.get("match_score"),
                     "ATS": r.get("ats_score"),
@@ -50,15 +51,13 @@ def render_history_view(API_URL, auth_header, groq_api_key):
     with filter_col2:
         status_filter = st.selectbox("Status", ["All", "Shortlisted", "Not Selected"], key="hist_status")
     with filter_col3:
-        min_score_filter = st.slider("Min Score", 0, 100, 0, key="hist_score")
+        verdict_filter = st.selectbox("AI Verdict", ["All", "Ready to Hire", "Not Ready"], key="hist_verdict")
         
     try:
         params = {}
         if status_filter != "All":
             params["status"] = status_filter
-        if min_score_filter > 0:
-            params["min_score"] = float(min_score_filter)
-            
+        
         res = requests.get(f"{API_URL}/analytics/list", headers=auth_header, params=params)
         if res.status_code == 200:
             history_data = res.json()
@@ -66,6 +65,9 @@ def render_history_view(API_URL, auth_header, groq_api_key):
                 if search_name:
                     history_data = [a for a in history_data if search_name.lower() in a["candidate_name"].lower()]
                 
+                if verdict_filter != "All":
+                    history_data = [a for a in history_data if a.get("ai_evaluation", {}).get("hiring_status") == verdict_filter]
+
                 if history_data:
                     df_hist = pd.DataFrame(history_data)
                     st.markdown("---")
@@ -108,6 +110,25 @@ def render_history_view(API_URL, auth_header, groq_api_key):
                                         if e_res.status_code == 200:
                                             st.download_button("Download CSV", e_res.content, file_name=f"project_{jd_id}.csv", mime="text/csv")
                                         else: st.error("Export Failed")
+                                
+                                # Candidate Detail Rows for this project
+                                project_cands = [a for a in history_data if a['job_description_id'] == jd_id]
+                                with st.expander("Show Candidates in this cluster"):
+                                    for pc in project_cands:
+                                        c_col1, c_col2, c_col3 = st.columns([2, 1, 1])
+                                        with c_col1:
+                                            st.markdown(f"**{pc['candidate_name']}** (`{pc['match_score']}%`)")
+                                        with c_col2:
+                                            if st.button("Deep AI 🧠", key=f"hist_intel_{pc['id']}", width='stretch'):
+                                                # Use the session state navigation pattern
+                                                st.session_state.focus_candidate_name = pc['candidate_name']
+                                                st.session_state.nav_selection = "🔍 New Analysis"
+                                                # Need to restore results first
+                                                load_project_to_dashboard(jd_id, API_URL, auth_header)
+                                        with c_col3:
+                                            if st.button("Schedule 🤝", key=f"hist_iv_{pc['id']}", width='stretch'):
+                                                st.session_state.nav_selection = "🤝 Interview Manager"
+                                                st.rerun()
                     
                     with hist_tab2:
                         st.markdown("#### System-Wide Compliance Audit")

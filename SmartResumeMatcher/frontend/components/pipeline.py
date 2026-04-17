@@ -36,7 +36,9 @@ def render_talent_pipeline(df, auth_header, API_URL):
                         st.markdown(f"Match: `{sc['Score']}%` | ATS: `{sc.get('ATS', 0)}%`")
                         
                         new_status = st.selectbox("Transition", stages, index=stages.index(stage), key=f"pipe_status_{sc['id']}", label_visibility="collapsed")
-                        if new_status != stage:
+                        
+                        btn_col1, btn_col2 = st.columns(2)
+                        with btn_col1:
                             if st.button("Move ⚡", key=f"pipe_btn_{sc['id']}", width='stretch'):
                                 p_res = requests.patch(f"{API_URL}/analytics/status/{sc.get('id')}", json={"status": new_status}, headers=auth_header)
                                 if p_res.status_code == 200:
@@ -48,3 +50,9 @@ def render_talent_pipeline(df, auth_header, API_URL):
                                     time.sleep(0.5)
                                     st.rerun(scope="fragment")
                                 else: st.error("Sync Error")
+                        
+                        with btn_col2:
+                            if st.button("Deep AI 🧠", key=f"intel_btn_{sc['id']}", width='stretch'):
+                                st.session_state.focus_candidate_name = sc['Candidate']
+                                st.session_state.nav_selection = "🔍 New Analysis" # Redirect to analysis dashboard
+                                st.rerun()

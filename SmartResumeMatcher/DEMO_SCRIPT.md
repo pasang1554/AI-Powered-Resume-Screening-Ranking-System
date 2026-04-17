@@ -9,49 +9,44 @@
 
 ## ✨ SINGULARITY FEATURES (v8.1)
 
-### 1. 🎭 Strategic Persona Selector
-- **Look for**: Sidebar selector for "Operator", "Architect", or "Strategist".
-- **Demo Tip**: Switch between personas to show how the UI dynamically reconfigures its strategic hubs.
+### 1. 🧠 Intelligence Deep-Dive Hub
+- **ATS Coaching**: Show the AI-generated tips for resume improvement.
+- **Interview Scorecards**: Demonstrate the instant generation of role-specific rubrics.
+- **Candidate Simulator**: Perform a prep-mode roleplay where the AI adopts the candidate's persona.
 
-### 2. 🔮 Singularity Foresight Hub
-- **Succession Regents**: Show the AI-driven leadership gap predictions and training roadmaps.
-- **Quantum Simulator**: Demonstrate the 5-year trajectory and ROI financial impact projections.
-- **Kinetic 3D Clusters**: Interact with the immersive 3D global talent mapping.
+### 2. 🌍 Global Career Gateway
+- **Portal Mode**: Toggle from Recruiter to Candidate view to show the unauthenticated job discovery page.
+- **Autonomous Application**: Upload a resume in the portal and show it instantly appearing in the backend pipeline.
 
-### 3. 🤝 Human-AI Synergy Node
-- **Bridges**: Explain how the system pools intelligence across sectors (Quantum, Biotech, Space).
-- **Synergy Feedback**: Demonstrate the collaborative feedback loops for final candidate verdicts.
-
-### 4. ⚖️ Global Sovereignty Hub
-- **Ethics Monitor**: Show the immutable ethical ledger and neural bias verification.
-- **Verified Vault**: Display the trust-verified candidate milestones.
+### 3. 📊 Institutional Intelligence & ROI
+- **ROI Monitor**: Display the time and cost savings metrics.
+- **Scarcity Benchmarking**: Show the global skill scarcity index for hard-to-find technical talent.
+- **Quantum Roadmap**: Visualizing potential future workforce impact based on current hiring velocity.
 
 ---
 
 ## 🎙️ The Winning Walkthrough (Viva Steps)
 
-### Step 1: Secure Access & Role Selection (15s)
-"We start with a secure login. Notice the **Strategic Persona** selector—we can operate the system as a tactical recruiter or a high-level organizational strategist."
+### Step 1: Secure Access & Persona Strategy (15s)
+"We start with a secure login. Recruiters can enter the **Command Center**, while candidates have a dedicated **Public Portal** for autonomous applications."
 
-### Step 2: Ingestion & Neural Mapping (45s)
-1. Use **"Load Sample Data/Demo"** in the sidebar.
-2. Click **"🚀 Analyze Candidates"**.
-3. **Say**: "The system performs TF-IDF mapping followed by qualitative Llama 3.1 analysis to identify the 'True Fit'."
+### Step 2: Ingestion & Intelligence Synthesis (45s)
+1. Run a **"New Analysis"** or load an existing project.
+2. **Say**: "The system performs TF-IDF mapping followed by a **Deep AI Evaluation** to synthesize qualitative intelligence."
 
-### Step 3: Strategic Comparison & Studio (1 min)
-1. Go to **Comparison** tab.
-2. Select top candidates and show the side-by-side metric grid.
-3. **Say**: "The Comparison Studio allows for deep horizontal mapping of candidate value."
+### Step 3: Intelligence Deep-Dive (1 min)
+1. Go to **Intelligence Deep-Dive** tab.
+2. Generate an **Interview Scorecard** and trigger a **Candidate Simulation**.
+3. **Say**: "We don't just screen; we simulate. The AI adopts the candidate's persona for a tactical interview roleplay."
 
-### Step 4: Singularity Foresight (1 min)
-1. Go to **Singularity Foresight** nav.
-2. Show the **Succession Roadmap**.
-3. **Say**: "This is the flagship feature. The AI predicts our next CEO or Technical Director based on the Talent Vault and maps out their training roadmap."
+### Step 4: Institutional Insights (1 min)
+1. Navigate to **Institutional Insights**.
+2. Show the **Market Scarcity Index** and **ROI Metrics**.
+3. **Say**: "This Command Center provides executives with a global view of talent scarcity and systematic cost savings."
 
-### Step 5: Project Closure & Intelligence Brief (15s)
-1. Go to **Export** tab.
-2. Generate the **Enterprise Recruitment Brief (PDF)**.
-3. Archive the project to show persistence.
+### Step 5: Professional Report Export (15s)
+1. Click **"Download Intelligence Report"**.
+2. **Say**: "We generate a branded, high-fidelity PDF brief that packages all AI insights into a shareable recruitment package."
 
 ---
 

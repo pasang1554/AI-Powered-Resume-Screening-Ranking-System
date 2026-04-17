@@ -8,8 +8,8 @@ services:
   - type: web
     name: singularity-api
     env: docker
-    dockerContext: .
-    dockerfilePath: Dockerfile.backend
+    dockerContext: SmartResumeMatcher
+    dockerfilePath: SmartResumeMatcher/Dockerfile.backend
     plan: free
     region: oregon
     healthCheckPath: /health
@@ -31,8 +31,8 @@ services:
   - type: web
     name: singularity-dashboard
     env: docker
-    dockerContext: .
-    dockerfilePath: Dockerfile.frontend
+    dockerContext: SmartResumeMatcher
+    dockerfilePath: SmartResumeMatcher/Dockerfile.frontend
     plan: free
     region: oregon
     envVars:
@@ -52,3 +52,4 @@ databases:
   - name: singularity-db
     plan: free
     region: oregon
+

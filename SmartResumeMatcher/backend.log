@@ -1,11 +1,67 @@
-{"asctime": "2026-04-12 23:13:38,986", "levelname": "INFO", "name": "root", "message": "Starting Smart Resume Matcher - Modular Enterprise API"}
-{"asctime": "2026-04-12 23:13:40,243", "levelname": "INFO", "name": "httpx", "message": "HTTP Request: GET http://testserver/health \"HTTP/1.1 200 OK\""}
-{"asctime": "2026-04-12 23:13:40,452", "levelname": "INFO", "name": "httpx", "message": "HTTP Request: POST http://testserver/api/v1/auth/register \"HTTP/1.1 200 OK\""}
-{"asctime": "2026-04-12 23:13:40,630", "levelname": "INFO", "name": "httpx", "message": "HTTP Request: POST http://testserver/api/v1/auth/token \"HTTP/1.1 200 OK\""}
-{"asctime": "2026-04-12 23:13:40,633", "levelname": "INFO", "name": "httpx", "message": "HTTP Request: GET http://testserver/api/v1/auth/me \"HTTP/1.1 200 OK\""}
-{"asctime": "2026-04-12 23:13:40,809", "levelname": "INFO", "name": "httpx", "message": "HTTP Request: POST http://testserver/api/v1/auth/register \"HTTP/1.1 200 OK\""}
-{"asctime": "2026-04-12 23:13:40,982", "levelname": "INFO", "name": "httpx", "message": "HTTP Request: POST http://testserver/api/v1/auth/token \"HTTP/1.1 200 OK\""}
-{"asctime": "2026-04-12 23:13:41,341", "levelname": "INFO", "name": "httpx", "message": "HTTP Request: POST http://testserver/api/v1/analyze/pdf \"HTTP/1.1 200 OK\""}
-{"asctime": "2026-04-12 23:13:41,540", "levelname": "INFO", "name": "httpx", "message": "HTTP Request: POST http://testserver/api/v1/auth/register \"HTTP/1.1 200 OK\""}
-{"asctime": "2026-04-12 23:13:41,714", "levelname": "INFO", "name": "httpx", "message": "HTTP Request: POST http://testserver/api/v1/auth/token \"HTTP/1.1 200 OK\""}
-{"asctime": "2026-04-12 23:13:41,719", "levelname": "INFO", "name": "httpx", "message": "HTTP Request: GET http://testserver/api/v1/audit/logs \"HTTP/1.1 200 OK\""}
+{"asctime": "2026-04-17 10:05:41,631", "levelname": "INFO", "name": "root", "message": "Starting Smart Resume Matcher - Modular Enterprise API"}
+INFO:     Started server process [3105]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:51334 - "POST /api/v1/auth/token HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51336 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+[nltk_data] Downloading package wordnet to
+[nltk_data]     /Users/stanzinpasang/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+{"asctime": "2026-04-17 10:07:13,834", "levelname": "INFO", "name": "httpx", "message": "HTTP Request: POST https://api.groq.com/openai/v1/chat/completions \"HTTP/1.1 200 OK\""}
+{"asctime": "2026-04-17 10:07:13,946", "levelname": "INFO", "name": "httpx", "message": "HTTP Request: POST https://api.groq.com/openai/v1/chat/completions \"HTTP/1.1 200 OK\""}
+{"asctime": "2026-04-17 10:07:13,948", "levelname": "INFO", "name": "httpx", "message": "HTTP Request: POST https://api.groq.com/openai/v1/chat/completions \"HTTP/1.1 429 Too Many Requests\""}
+{"asctime": "2026-04-17 10:07:13,949", "levelname": "INFO", "name": "groq._base_client", "message": "Retrying request to /openai/v1/chat/completions in 13.000000 seconds"}
+{"asctime": "2026-04-17 10:07:13,964", "levelname": "INFO", "name": "httpx", "message": "HTTP Request: POST https://api.groq.com/openai/v1/chat/completions \"HTTP/1.1 200 OK\""}
+{"asctime": "2026-04-17 10:07:27,196", "levelname": "INFO", "name": "httpx", "message": "HTTP Request: POST https://api.groq.com/openai/v1/chat/completions \"HTTP/1.1 429 Too Many Requests\""}
+{"asctime": "2026-04-17 10:07:27,197", "levelname": "INFO", "name": "groq._base_client", "message": "Retrying request to /openai/v1/chat/completions in 3.000000 seconds"}
+{"asctime": "2026-04-17 10:07:31,945", "levelname": "INFO", "name": "httpx", "message": "HTTP Request: POST https://api.groq.com/openai/v1/chat/completions \"HTTP/1.1 200 OK\""}
+INFO:     127.0.0.1:51355 - "POST /api/v1/analyze/pdf HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51368 - "GET /api/v1/analyze/export/125 HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/protocols/http/httptools_impl.py", line 415, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/applications.py", line 1138, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 121, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 107, in app
+    response = await f(request)
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 426, in app
+    raw_response = await run_endpoint_function(
+  File "/Users/stanzinpasang/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 314, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/Users/stanzinpasang/Desktop/mini project/AI-Powered-Resume-Screening-Ranking-System/SmartResumeMatcher/backend/routes/analysis.py", line 279, in export_candidate_intelligence
+    pdf_content = generate_intelligence_report_pdf(candidate_name, jd_title, score, ai_eval)
+  File "/Users/stanzinpasang/Desktop/mini project/AI-Powered-Resume-Screening-Ranking-System/SmartResumeMatcher/utils.py", line 1209, in generate_intelligence_report_pdf
+    ["Generated At:", datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")],
+NameError: name 'datetime' is not defined

@@ -7,7 +7,7 @@
 
 ## 👋 Intro (1 Minute)
 "Good morning everyone. My project is the **Universal Talent Singularity (v8.1)**, an autonomous recruitment intelligence ecosystem.
-The problem with traditional hiring is volume and lack of strategic foresight—HR receives hundreds of resumes and manually scanning them is slow, biased, and fails to predict future organizational needs. My solution evolves beyond simple screening into a **strategic nervous system** powered by **FastAPI**, with **Singularity Foresight**, **Global Sovereignty Hubs**, and **Human-AI Synergy Nodes**."
+The problem with traditional hiring is volume and lack of qualitative evaluation—HR receives hundreds of resumes and manually scanning them is slow, biased, and fails to identify the 'hidden' potential of a candidate. My solution evolves beyond simple screening into a **strategic recruitment nervous system** powered by **FastAPI**, with **Neural Qualitative Synthesis**, **Public Talent Gateways**, and **Institutional Intelligence Hubs**."
 
 ## ⚙️ Core Logic (2 Minutes)
 "The project has four main evaluation engines:
@@ -26,10 +26,9 @@ The problem with traditional hiring is volume and lack of strategic foresight—
     *   **Data Persistence (SQLite + SQLAlchemy)**: We use an ORM-based database to store user profiles, job descriptions, and candidate evaluation history. This allows recruiters to revisit past screenings and track talent trends over time.
     *   **Security & Auth (JWT)**: Secure access is managed using **OAuth2 with JSON Web Tokens**, ensuring candidate data is protected and only accessible to authorized recruiters.
 
-4.  **Strategic Foresight & Sovereignty**:
-    *   **Autonomous Succession Regents**: The system predicts leadership gaps and creates bridge-training roadmaps automatically.
-    *   **Quantum Workforce Simulator**: Tracks 5-year organizational trajectories and ROI impact.
-    *   **Global Sovereignty Hub**: Ensures decentralized ethical alignment and immutable skill verification via our 'Eternal Ledger'."
+3.  **Institutional Insights & Automation**:
+    *   **Departmental Command Center**: Tracks **Market Scarcity Index** (what skills are missing in the pool) and **Recruitment ROI** (time/cost savings).
+    *   **Public Gateway**: An unauthenticated endpoint allowing external candidates to apply directly, with autonomous AI evaluation upon ingestion."
 
 ## 🚀 Demo Walkthrough (2 Minutes)
 "Let me show you the application:
@@ -39,13 +38,11 @@ The problem with traditional hiring is volume and lack of strategic foresight—
 4.  **Process**: The system extracts text using `PyPDF2` and cleans it using `nltk`. Everything is processed asynchronously via our **API layer**.
 5.  **Results**:
     *   **🏆 Rankings Tab**: You see a ranked table of candidates with interactive KPI metrics.
-    *   **🛡️ Blind Hiring Mode**: *(Key Talking Point)* "If I toggle this, candidate PII is instantly hashed into unique UIDs. This ensures our first-stage screening is 100% merit-based and free from unconscious bias."
-    *   **📈 Analytics Tab**: Global talent benchmarks and skill distribution heatmaps.
-    *   **⚖️ Comparison Tab**: Side-by-side analysis. *Key Highlight:* We've added a direct candidate selector here so recruiters can pivot their analysis without leaving the tab.
-    *   **🔬 Details Tab**: Deep-dive into specific skill gaps and multi-modal signals like **Video Snapshots**.
-    *   **🚀 Public Gateway**: "We've also exposed a REST endpoint for external careers pages, allowing candidates to push resumes directly into this neural pipeline."
-    *   **📅 Interviews Tab (The AI Verifier)**: Includes the **Autonomous Simulator**—a logic-defying 'Prep Mode' where the AI adopts the candidate's persona for roleplay.
-    *   **💾 Export Tab**: Formal PDF Briefs and ZIP archiving of verified profiles.
+    *   **🧠 Intelligence Deep-Dive**: *(Key Highlight)* "A new tab providing **ATS Coaching**, **Interview Scorecards**, and **Candidate Roleplay Predictions** via Groq."
+    *   **📊 Institutional Insights**: "A high-level dashboard for executives showing skill gaps and total recruitment yield."
+    *   **🌍 Public Portal**: "I switch to candidate mode here to show the public gateway where external talent discover and apply for roles."
+    *   **🤝 Interview Manager**: "Integrated scheduling system with `.ics` calendar generation and post-session feedback recording."
+    *   **📥 Intelligence Export**: "Verified candidates get a formal **PDF Intelligence Brief** generated with ReportLab."
 
 ## ❓ Probable Questions (Be Prepared!)
 

@@ -1,9 +1,10 @@
-from fastapi import APIRouter, Depends, HTTPException, status, UploadFile, File, Form
+from fastapi import APIRouter, Depends, HTTPException, status, UploadFile, File, Form, Response
 from sqlalchemy.orm import Session
 from typing import List, Optional
 from datetime import datetime
 import asyncio
 import io
+import re
 
 from backend.database import get_db
 from backend.models import User, JobDescription, Candidate, Analysis
@@ -35,9 +36,14 @@ async def analyze_pdf_resumes(
     )
     
     results = []
+    # Extract a professional title from the JD content (first non-empty line, stripping symbols)
+    desc_lines = [l.strip() for l in job_description.split('\n') if l.strip()]
+    raw_title = desc_lines[0] if desc_lines else f"Analysis {datetime.utcnow().strftime('%Y-%m-%d %H:%M')}"
+    jd_title = re.sub(r"[#*_\[\]]", "", raw_title)[:60].strip()
+
     jd = JobDescription(
         user_id=current_user.id,
-        title=f"PDF Analysis {datetime.utcnow().strftime('%Y-%m-%d %H:%M')}",
+        title=jd_title,
         content=job_description,
         threshold=threshold,
     )
@@ -87,10 +93,15 @@ async def analyze_pdf_resumes(
 
         ai_eval = None
         if client:
-            async with groq_semaphore:
-                processed_text = redact_pii(text) if blind_hiring else text
-                final_text = processed_text[:8000] if processed_text else ""
-                ai_eval = await asyncio.to_thread(evaluate_resume_with_groq, client, job_description, final_text)
+            try:
+                async with groq_semaphore:
+                    processed_text = redact_pii(text) if blind_hiring else text
+                    final_text = processed_text[:8000] if processed_text else ""
+                    ai_eval = await asyncio.to_thread(evaluate_resume_with_groq, client, job_description, final_text)
+            except Exception as e:
+                # Log the specific AI failure but allow basic analysis to proceed
+                print(f"Neural evaluation failed for {f.filename}: {e}")
+                ai_eval = {"error": "AI evaluation core encountered an anomaly. Proceeding with base metrics."}
                     
         return {
             "filename": f.filename,
@@ -168,6 +179,7 @@ async def analyze_pdf_resumes(
             "Status": res["status"],
             "Top_Skills": res["cand_skills"][:6],
             "AI_Evaluation": res["ai_eval"],
+            "resume_text": res["text"],
             "Email": res["detailed"].get("email"),
             "Real_Name": cand.name,
             "Radar_Data": res["radar_data"]
@@ -213,7 +225,7 @@ async def get_interview_scorecard(
 
 @router.post("/simulate")
 async def api_simulate_candidate(
-    candidate_id: int,
+    candidate_id: int = Form(...),
     groq_api_key: str = Form(...),
     db: Session = Depends(get_db),
     current_user: User = Depends(get_current_user),
@@ -240,3 +252,34 @@ async def api_simulate_candidate(
         )
         return {"simulation": response.choices[0].message.content}
     except Exception as e: raise HTTPException(status_code=500, detail=str(e))
+
+@router.get("/export/{analysis_id}")
+async def export_candidate_intelligence(
+    analysis_id: int,
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user),
+):
+    """
+    Exports a high-fidelity PDF report for a specific candidate analysis.
+    """
+    from utils import generate_intelligence_report_pdf
+    
+    analysis = db.query(Analysis).filter(Analysis.id == analysis_id).first()
+    if not analysis:
+        raise HTTPException(status_code=404, detail="Analysis report not found")
+        
+    if not analysis.ai_evaluation:
+        raise HTTPException(status_code=400, detail="Deep AI Evaluation not found for this candidate. Run analysis with Groq key first.")
+        
+    candidate_name = analysis.candidate.name
+    jd_title = analysis.job_description.title
+    score = analysis.match_score
+    ai_eval = analysis.ai_evaluation
+    
+    pdf_content = generate_intelligence_report_pdf(candidate_name, jd_title, score, ai_eval)
+    
+    return Response(
+        content=pdf_content,
+        media_type="application/pdf",
+        headers={"Content-Disposition": f"attachment; filename=intelligence_report_{candidate_name.replace(' ', '_')}.pdf"}
+    )
