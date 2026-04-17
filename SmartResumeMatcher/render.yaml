@@ -40,6 +40,7 @@ services:
         value: http://singularity-api:10000/api/v1
       - key: ENVIRONMENT
         value: production
+    healthCheckPath: /_stcore/health
 
 # ---------------------------------------------------------------------------
 # GLOBAL PERSISTENCE (POSTGRESQL)
@@ -48,4 +49,3 @@ databases:
   - name: singularity-db
     plan: free
     region: oregon
-
