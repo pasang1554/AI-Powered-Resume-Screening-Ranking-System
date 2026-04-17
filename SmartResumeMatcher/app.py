@@ -29,7 +29,14 @@ API_URL = os.getenv("API_URL", "http://localhost:8000/api/v1")
 
 # Schema Guard: Ensure API_URL has a scheme (important for Render Blueprints)
 if API_URL and not API_URL.startswith(("http://", "https://")):
-    API_URL = f"https://{API_URL}"
+    # Default to https for external hosts, but permit http for internal ones
+    if "onrender.com" in API_URL or "." in API_URL.split("/")[0]:
+        API_URL = f"https://{API_URL}"
+    else:
+        API_URL = f"http://{API_URL}"
+
+# Debug: This will show up in Render's dashboard logs for the dashboard service
+print(f"DEBUG: Connecting to Backend at: {API_URL}")
 
 st.set_page_config(
     page_title="Smart Resume Matcher",

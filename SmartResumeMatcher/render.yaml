@@ -37,11 +37,7 @@ services:
     region: oregon
     envVars:
       - key: API_URL
-        fromService:
-          type: web
-          name: singularity-api
-          property: host
-        suffix: /api/v1
+        value: http://singularity-api:10000/api/v1
       - key: ENVIRONMENT
         value: production
 
