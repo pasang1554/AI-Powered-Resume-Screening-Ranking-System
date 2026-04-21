@@ -92,7 +92,7 @@ if not st.session_state.token:
                     <p style="color: #94A3B8; margin: 1.5rem 0;">Explore global clusters, discover your match, and apply autonomously.</p>
                 </div>""", unsafe_allow_html=True
             )
-            if st.button("🚀 Explore Opportunities", use_container_width=True, key="enter_public"):
+            if st.button("🚀 Explore Opportunities", width='stretch', key="enter_public"):
                 st.session_state.entry_mode = "Public"
                 st.rerun()
 
@@ -103,7 +103,7 @@ if not st.session_state.token:
                     <p style="color: #94A3B8; margin: 1.5rem 0;">Manage pipelines, run deep neural audits, and orchestrate talent.</p>
                 </div>""", unsafe_allow_html=True
             )
-            if st.button("🔑 Recruiter Admin Login", use_container_width=True, key="enter_recruiter"):
+            if st.button("🔑 Recruiter Admin Login", width='stretch', key="enter_recruiter"):
                 st.session_state.entry_mode = "Recruiter"
                 st.rerun()
         

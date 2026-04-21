@@ -60,7 +60,7 @@ async def analyze_pdf_resumes(
         except Exception:
             pass
 
-    groq_semaphore = asyncio.Semaphore(3)
+    groq_semaphore = asyncio.Semaphore(1)
 
     async def process_file(f):
         file_bytes = await f.read()
@@ -237,6 +237,9 @@ async def api_simulate_candidate(
     from groq import Groq
     cand = db.query(Candidate).filter(Candidate.id == candidate_id).first()
     if not cand: raise HTTPException(status_code=404, detail="Candidate not found")
+        
+    if not cand.job_description:
+        raise HTTPException(status_code=400, detail="Candidate is not associated with a specific Job Architecture. Run a fresh analysis.")
         
     jd_content = cand.job_description.content
     resume_text = cand.resume_text

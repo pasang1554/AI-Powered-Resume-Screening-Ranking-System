@@ -51,18 +51,18 @@ def render_analysis_dashboard(results, jd_content, sidebar_data, api_url, auth_h
         # Simplified candidate table for readability
         display_cols = ["Rank", "Candidate", "Score", "ATS", "Experience", "Status"]
         existing_cols = [c for c in display_cols if c in df.columns]
-        st.dataframe(df[existing_cols], use_container_width=True, hide_index=True)
+        st.dataframe(df[existing_cols], width='stretch', hide_index=True)
         
     with tab_visuals:
         col_chart1, col_chart2 = st.columns(2)
         with col_chart1:
             fig_score = px.bar(df, x="Candidate", y="Score", color="Status", 
                              title="Match Score Distribution", template="plotly_dark")
-            st.plotly_chart(fig_score, use_container_width=True)
+            st.plotly_chart(fig_score, width='stretch')
         with col_chart2:
             fig_exp = px.scatter(df, x="Experience", y="Score", size="ATS", color="Status",
                                title="Experience vs. Score Analysis", template="plotly_dark")
-            st.plotly_chart(fig_exp, use_container_width=True)
+            st.plotly_chart(fig_exp, width='stretch')
 
     with tab_intelligence:
         st.markdown("#### Selection Module")

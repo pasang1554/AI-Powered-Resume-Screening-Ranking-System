@@ -16,6 +16,7 @@ from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle
 from reportlab.lib.units import inch
 from io import BytesIO
+from datetime import datetime
 
 # Download necessary NLTK data
 try:
@@ -588,6 +589,41 @@ def generate_skill_radar_data(job_description, resume_text):
     }
 
 
+def safe_json_loads(text):
+    """
+    Attempts to clean and parse JSON from LLM responses more robustly.
+    """
+    if not text:
+        return {"error": "Empty response"}
+    
+    # Try direct parse
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        pass
+        
+    # Attempt to find JSON block with regex
+    json_match = re.search(r"(\{.*\})", text, re.DOTALL)
+    if json_match:
+        try:
+            # Clean up common LLM artifacts like trailing commas or non-standard escapes
+            clean_json = json_match.group(1).replace(",\n}", "\n}").replace(",}", "}")
+            return json.loads(clean_json)
+        except:
+            pass
+
+    # Final attempt: manual cleanup of newlines inside strings or common mistakes
+    try:
+        # This is a risky broad cleanup but helps in some cases
+        fixed_text = text.strip()
+        if not fixed_text.startswith("{") and "{" in fixed_text:
+            fixed_text = fixed_text[fixed_text.find("{"):]
+        if not fixed_text.endswith("}") and "}" in fixed_text:
+            fixed_text = fixed_text[:fixed_text.rfind("}")+1]
+        return json.loads(fixed_text)
+    except:
+        return {"error": "Failed to parse JSON core", "raw": text[:200]}
+
 def evaluate_resume_with_groq(client, job_description, resume_text):
     """
     Evaluates a resume against a job description using the GROQ API.
@@ -655,21 +691,7 @@ Return output strictly in JSON format:
             )
 
             response_content = completion.choices[0].message.content
-            # Try to parse JSON strictly
-            try:
-                return json.loads(response_content)
-            except json.JSONDecodeError:
-                # If standard parsing fails, try to find JSON block
-                import re
-
-                json_match = re.search(r"\{.*\}", response_content, re.DOTALL)
-                if json_match:
-                    return json.loads(json_match.group(0))
-                else:
-                    return {
-                        "error": "Failed to parse JSON response",
-                        "raw_content": response_content,
-                    }
+            return safe_json_loads(response_content)
 
         except Exception as e:
             error_msg = str(e)
@@ -740,14 +762,7 @@ Return output strictly in JSON format with:
             )
 
             response_content = completion.choices[0].message.content
-            try:
-                return json.loads(response_content)
-            except:
-                import re
-                json_match = re.search(r"\{.*\}", response_content, re.DOTALL)
-                if json_match:
-                    return json.loads(json_match.group(0))
-                return {"error": "Failed to parse coaching JSON"}
+            return safe_json_loads(response_content)
 
         except Exception as e:
             if "429" in str(e) and attempt < max_retries:
@@ -791,12 +806,7 @@ Return output strictly in JSON format:
             max_tokens=1000,
         )
         response_content = completion.choices[0].message.content
-        import json
-        import re
-        json_match = re.search(r"\{.*\}", response_content, re.DOTALL)
-        if json_match:
-            return json.loads(json_match.group(0))
-        return {"error": "Failed to parse scorecard JSON"}
+        return safe_json_loads(response_content)
     except Exception as e:
         return {"error": str(e)}
 

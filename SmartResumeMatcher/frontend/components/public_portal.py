@@ -52,7 +52,7 @@ def render_public_career_portal(api_url):
             preview = job['content'][:150] + "..." if len(job['content']) > 150 else job['content']
             st.write(preview)
             
-            if st.button(f"View & Apply 🚀", key=f"apply_btn_{job['id']}", use_container_width=True):
+            if st.button(f"View & Apply 🚀", key=f"apply_btn_{job['id']}", width='stretch'):
                 st.session_state.applying_for_id = job['id']
                 st.session_state.applying_for_title = job['title']
             

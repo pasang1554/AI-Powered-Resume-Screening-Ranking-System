@@ -44,8 +44,12 @@ def render_intelligence_suite(candidate, jd_content, groq_api_key, api_url, auth
 
     with tab_eval:
         ai_eval = candidate.get("AI_Evaluation")
-        if ai_eval and isinstance(ai_eval, dict) and "error" not in ai_eval:
-            render_deep_evaluation(ai_eval)
+        if ai_eval and isinstance(ai_eval, dict):
+            if "error" in ai_eval:
+                st.error(f"Neural Core Error: {ai_eval['error']}")
+                st.info("This often happens due to API rate limits. Try running the analysis again in a few moments.")
+            else:
+                render_deep_evaluation(ai_eval)
         else:
             st.info("No deep evaluation data available for this candidate. Run a new analysis with a Groq key.")
 

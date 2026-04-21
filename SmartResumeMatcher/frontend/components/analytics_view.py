@@ -38,7 +38,7 @@ def render_institutional_insights(api_url, auth_header, groq_api_key):
                         template="plotly_dark",
                         color_continuous_scale="YlOrRd"
                     )
-                    st.plotly_chart(fig, use_container_width=True)
+                    st.plotly_chart(fig, width='stretch')
                     
                     st.markdown("##### Vault Inventory")
                     st.table(df_scarcity[["skill", "vault_count", "scarcity_index"]])
@@ -62,7 +62,7 @@ def render_institutional_insights(api_url, auth_header, groq_api_key):
             data = {"Month": months, "Manual": [10, 15, 12, 18, 14, 16], "Neural": [45, 62, 58, 89, 112, 145]}
             df_v = pd.DataFrame(data)
             fig_v = px.line(df_v, x="Month", y=["Manual", "Neural"], title="Intelligence Yield Projection", template="plotly_dark")
-            st.plotly_chart(fig_v, use_container_width=True)
+            st.plotly_chart(fig_v, width='stretch')
             
         except: st.info("ROI Engine initializing...")
 
